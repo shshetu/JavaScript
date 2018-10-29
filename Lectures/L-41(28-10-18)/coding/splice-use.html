@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Use of Splice</title>
+    <script type="text/javascript">
+      var computer = new Array("IBM","Apple");
+      document.write(computer);
+      document.write("<hr>");
+      computer.splice(1,0,"HP"); // Placed at index 1(Apple) and pushed it to right without deleting anything
+      document.write(computer);
+      document.write("<hr>");
+      computer.splice(1,1,"Lenovo");//Placed at index 1 and remove()
+      document.write(computer);
+      document.write("<hr>");
+      computer.splice(2,1,"Doel");
+      document.write(computer);
+      document.write("<hr>");
+      computer.splice(1,1);
+      document.write(computer);
+      document.write("<hr>");
+      computer.splice(1,2);
+      document.write(computer);
+      document.write("<hr>");
+      
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

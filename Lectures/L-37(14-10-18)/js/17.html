@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cases in Variable and Functions</title>
+</head>
+
+<body>
+  <h1>VarFunCase</h1>
+  <script>
+    var tax = .05;
+
+    function addTax(item) {
+      var total = item + (item * Tax);
+      var NewTotal = Math.floor(Total);
+      var Fraction = Math.round(Total * 100) % 100;
+      if (Fraction < 10) {
+        Fraction = "0" + Fraction;
+      }
+      Total = NewTotal + "." + Fraction;
+      alert("Your total is $" + Total);
+    }
+  </script>
+  <center>
+    <a href="#" onClick="addTax(7.22)" ;>Click for Total</a>
+  </center>
+</body>
+
+</html>

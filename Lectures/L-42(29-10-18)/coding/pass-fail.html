@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pass or Fail program</title>
+
+</head>
+
+<body>
+<h2> Give 3 Subject Number and get Result	</h2>
+<script>
+var mark =  prompt ("Enter Obtained Mark:","");
+//Suppose Pass Mark of Each Subject 70%
+var pass = "You are passed!";
+var fail = "You are Failed!";
+if(mark< 55){
+	alert (fail + "and Grade is F");
+	}else if(mark<=69){
+		alert (pass + "and Grade is C");
+		}else if(mark<=79){
+			alert(pass + "and Grade is B");
+			}else if(mark<=82){
+			alert(pass + "and Grade is B+");
+			}else if(mark<=86){
+			alert(pass + "and Grade is A-");
+			}else if(mark<=100){
+			alert(pass + "and Grade is A");
+			}else {
+			alert("Invalid Nubmer");
+			}
+	</script>
+</body>
+</html>

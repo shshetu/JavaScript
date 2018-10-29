@@ -1,0 +1,43 @@
+#maindiv{
+  width:60%;
+  height:auto;
+  margin:0 auto;
+
+}
+.row{
+  width:100%;
+  height:auto;
+  min-height: 30px;
+
+}
+.left{
+  width:30%;
+  height:auto;
+float: left;
+
+}
+.right{
+  width:70%;
+  height:auto;
+  float: left;
+
+
+}
+.green{
+  background-color: green;
+}
+.red{
+  background-color: red;
+}
+.blue{
+  background-color: blue;
+}
+.cyan{
+  background-color: cyan;
+}
+.aqua{
+  background-color: aqua;
+}
+.title{
+  line-height:30px;
+}
