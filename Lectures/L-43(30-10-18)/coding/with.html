@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>With Statement</title>
+</head>
+
+<body bgcolor = "cornsilk">
+<script>
+function showEm(){
+	with(document.customer){
+		var alpha = fname.value;
+		var beta = lname.value;
+		var gamma = address.value;
+		var delta = city.value;
+		var epsilon = state.value;
+		}
+		var fullName =  alpha + " " + beta + "\n";
+		var livesHere = gamma + "\n " + delta + "," + epsilon;
+		alert(fullName + livesHere);
+	} 
+	
+	</script>
+   <form name ="customer">
+    First Name: <input type="text" name = "fname">: <br>
+    Last Name:  <input type="text" name = "lname"> 
+<br>
+  Address: <input type="text" name = "Address"> 
+<br>
+  City: <input type="text" name = "city"> 
+  State: <input type="text" name = "state" size = 2> 
+<p>
+   <input type="button" value = "Click Here" onClick = "showEm()"> 
+</form>
+   
+   	
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h2>Print 1 to 10 using while loop</h2>
+<script>
+var sum =0;
+var sum1 =0;
+function oddWhile(sn,en){
+	while(en>sn){
+		sum=sum+sn;
+	document.write(sn + " ");	
+	
+	sn=sn+2;
+		}
+	return sn;
+	
+	}
+	
+function oddFor(sn,en){
+	for(sn;en>=sn;sn=sn+2){
+		
+		document.write(sn + " ");
+		}
+	}
+
+function oddDoWhile(sn,en){
+	do{
+		
+		if(sn % 2 !=0){
+		document.write(sn + " ");
+			sn++;
+			}
+				
+			
+		}
+	while(sn<=en);
+	}
+	oddWhile(1,10);
+	document.write("<hr>");
+	oddFor(1,10);
+		document.write("<hr>");
+	oddDoWhile(1,10);	
+	</script>
+</body>
+</html>
