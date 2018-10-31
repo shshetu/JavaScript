@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Print 1 t 10 except 7</title>
+</head>
+
+<body>
+<h1>Run loop from 1 to 100 but print 1 to 20</h1>
+<script>
+var sn = parseInt(prompt("Enter the strating number",""));
+var en = parseInt( prompt("Enter the ending number",""));
+
+function pr(sn,en){
+for(i=sn;i<=en;i++){
+	
+	if(i%50!=0){
+		document.write(i + " ");
+		}
+		else if(i%50==0){
+			break;
+			}
+		
+	}
+}
+pr(sn,en);
+	</script>
+</body>
+</html>

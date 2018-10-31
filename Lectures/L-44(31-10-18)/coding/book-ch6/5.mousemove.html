@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MouseMove</title>
+</head>
+
+<body bgcolor="#FF3333">
+<h1>Mouse Move</h1>
+<script>
+var recordIt = 0;
+function moveIt(){
+	recordIt +=1;
+	document["viewer"]["spot"]["value"] = recordIt;
+	}
+</script>
+<h2>How many mouse moves?</h2>
+<form name ="viewer">
+<input name="spot" type="text" value="" size="1">
+</form>
+<a href="#" onMouseMove = "moveIt()">Tickle this spot</a><br>
+<a href="#" onClick = "moveIt()">Click this spot</a> <br>
+<a href="#" onMouseOver = "moveIt()">overit this spot</a> <br>
+<a href="#" onMouseOut = "moveIt()">Tickle this spot</a> <br>
+<a href="#" onMouseDown = "moveIt()">Tickle this spot</a> <br>
+<a href="#" onMouseUp = "moveIt()">Tickle this spot</a> <br>
+<a href="#" onKeyUp = "moveIt()">Tickle this spot</a> <br>
+
+</body>
+</html>

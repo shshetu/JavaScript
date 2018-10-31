@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Function porperties</title>
+</head>
+
+<body>
+<script>
+function bogus(xx){
+	// The 'XX' is the argument
+	var alpha = arguments.length ;
+	var beta = bogus.length;
+	return alpha + " arguments, but should use " + beta + "    argument/s."
+	//When the bogus.length run it returns 1 because it only has 1 argument.
+	}
+	document.write("This function uses " + bogus(3,4,5));
+	document.write("<br> "+alpha);
+	</script>
+</body>
+</html>
