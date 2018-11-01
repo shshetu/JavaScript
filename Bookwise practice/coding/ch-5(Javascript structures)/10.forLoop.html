@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The for loop</title>
+  </head>
+  <body>
+    <h1>for loop</h1>
+<script type="text/javascript">
+function email(){
+  var emailAd = prompt("Enter Email","") ;
+  var found = "Email address is missing @ symbol";
+  for(var counter=0;counter<=emailAd.length;counter++){
+    var findIt = emailAd.charAt(counter);
+    if(findIt == "@"){
+      found = "Email address already has @ symbol";
+    }
+  }
+  document.write(found);
+}
+email();
+</script>
+  </body>
+</html>

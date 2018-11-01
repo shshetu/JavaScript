@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>form using with statement</title>
+    <script type="text/javascript">
+      function showEm(){
+      with(document.customer){
+      var alpha = fname.value;
+      var beta = lname.value;
+      var gamma = address.value;
+      var delta = city.value;
+      var epsilon =state.value;
+      }
+      var fullName = alpha + " " + beta;
+      var livesHere = "\n" + gamma +"\n" +delta+"\n" + epsilon ;
+      alert(fullName+livesHere);
+    }
+    </script>
+  </head>
+  <body>
+    <form name="customer">
+      First Name:<input type="text" name="fname" value=""> <br>
+      Last Name:<input type="text" name="lname" value=""><br>
+      Address Name:<input type="text" name="address" value=""><br>
+      City:<input type="text" name="city" value=""><br>
+      State:<input type="text" name="state" value=""><br>
+    <input type="button" name="" value="Click here" onClick="showEm()"> <br>
+    </form>
+  </body>
+</html>
