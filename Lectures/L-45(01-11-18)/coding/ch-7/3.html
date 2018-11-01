@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Reading screen properties</title>
+<script>
+
+function showScreen(){
+	var display ="<h2>Your screen has the following characteristics:</h2>";
+	
+	var screenSee = new Array(5);
+	screenSee[0] = " Available screen height =" +screen.availHeight;
+	screenSee[1] = " Available screen width =" +screen.availWidth;
+	screenSee[2] = "You have" +(screen.colorDepth)+ " bit color.";
+	screenSee[3] = "Your screen is" + screen.height +" pixels high";
+	screenSee[4] = "and " + screen.width + "pixels wide.";
+for(var counter=0;counter<screenSee.length;counter++){
+	display += screenSee[counter] + "<br>";
+	}
+	display += "";
+	document.write(display);
+	}
+	showScreen();
+	</script>
+</head>
+
+
+<body>
+</body>
+</html>

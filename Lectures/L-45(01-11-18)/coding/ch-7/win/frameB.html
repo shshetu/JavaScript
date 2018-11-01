@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="winProp.css">
+<script>
+var display = "<h3>" + self.name + "</h3>";
+display += "<div class ='bod'>";
+var gone = "";
+var alpha = self.closed;
+if(alpha==false){
+	var gone ="never";
+	}
+	display += "This window has " + gone + " been closed.<br>";
+	//Change the message in the lower left corner
+	self.defaultStatus = "\"This Window property can be changed.\"";
+	display += "The default status reads: " + self.defaultStatus + "<br></div>";
+	document.write(display);
+	</script>
+</head>
+
+<body>
+</body>
+</html>
