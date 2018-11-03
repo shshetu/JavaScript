@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>form validation using with statement</title>
+<script type="text/javascript">
+  function showEm(){
+with(document.student){
+  var alpha = fname.value;
+  var beta  = gender.value;
+  var delta = education.value;
+  var gamma = round.value;
+  var epsilon = txt.value;
+}
+var fullData = alpha +" "+ beta +" "+ delta + " "+ gamma + " " + epsilon;
+alert(fullData);
+  }
+</script>
+  </head>
+  <body>
+<h1>Form Validation</h1>
+<form name = "student"class="" action="index.html" method="post">
+Name: <input type="text" name="fname" value="">  <br>
+Gender: <input type="radio" name="gender" value=""> Male
+<input type="radio" name="gender" value=""> Female  <br>
+Education: <input type="checkbox" name="education" value=""> SSC
+<input type="checkbox" name="education" value=""> HSC <br>
+<select class="" name="round">
+<option value="" selected>Select the Round</option>
+<option value="">Round-36</option>
+<option value="">Round-37</option>
+<option value="">Round-38</option>
+<option value="">Round-39</option>
+
+</select> <br>
+<textarea name="txt" rows="5" cols="20"></textarea>  <br>
+<input type="button" name="" value="Reset"> <br>  <br>
+<input type="button" name="" value="Open Window">
+<input type="submit" name="" value="Submit" onclick="showEm()">
+<input type="button" name="" value="Close Window">
+
+</form>
+  </body>
+</html>

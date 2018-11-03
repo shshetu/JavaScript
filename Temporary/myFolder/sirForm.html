@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form validation</title>
+    <script type="text/javascript">
+var win;
+function openWindow(){
+  win = window.open("","","width=400");
+  win.document.write("<h2><center>Form Output</center></h2>");
+}
+function closeWindow(){
+  win.close();
+}
+function validateForm(){
+  ///////////////////////for Name////////
+  var fname = document.forms.myForm.fname.value;
+  var gender = document.forms.myForm.geneder.value;
+  var education = "";
+  if(document.forms.myForm.ssc.checked){
+    education += "," + document.forms.myForm.ssc.value;
+  }
+  if(document.forms.myForm.hsc.checked){
+    education += "," + document.forms.myForm.hsc.value;
+  }
+  var round =doucment.forms.myForm.round.value;
+  var msg = doucment.forms.myForm.msg.value;
+  ////////////////validation For Name Field/////////////////
+  if(fname ==""){
+    doucment.getElementById('fnamex').innerHTML = "Name must be filled out";
+    return false;
+  }
+  else if(fname.length<3){
+    doucment.getElementById('fnamex').innerHTML = "Name length at least 3 characters";
+    return false;
+  }
+  else if(gender == ""){
+    document.getElementById('gender').innerHTML = "Tell me your Gender";
+    return false;
+  }
+  /////////////////validation for Education field///////////
+  else if (!document.forms.myForm.ssc.checked && !document.forms.myForm.hsc.checked ){
+    document.getElementById('education').innerHTML = "Tell Me Your Education";
+    return false;
+  }
+  ///////////////validation for Round Field/////////////
+else if(round =='Select A Round'){
+  document.getElementById('round').innerHTML= "Select Your Round";
+  return false;
+}
+////////////////validation for Message Field/////////////
+else if(msg.length<10){
+  document.getElementById('msg').innerHTML ="At least 10 characters";
+  return false;
+}
+else {
+  win.document.write("Name: " + fname + "<br/>");
+  win.document.write("Gender: " + gender + "<br/>");
+
+  win.document.write("Education: " + education + "<br/>");
+  win.document.write("Round: " + round + "<br/>");
+  win.document.write("Comments: " + msg + "<br/>");
+}
+}
+
+    </script>
+  </head>
+  <body>
+<h1>Form Validation</h1>
+<form name="myForm">
+Name: <input type="text" name="fname" value=""> <label id="fnamex"></label> <br>
+Gender: <input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female <label id="gender"></label> <br>
+Education: <input type="checkbox" name="ssc" value="Ssc"> SSC
+<input type="checkbox" name="hsc" value="Hsc"> HSC <label id="education"></label> <br>
+Round <select  name="round">
+<option value="Select A Round" selected="selected">
+  <option value="Round 36">Round-36</option>
+  <option value="Round 37">Round-37</option>
+  <option value="Round 38">Round-38</option>
+</select>
+ <label id="round"></label> <br>
+<textarea name="msg" rows="5" cols="20" placeholder="Enter anything"></textarea>
+<label id="msg"></label>
+<input type="reset" name="" value="Reset">
+
+</form>
+<button onclick="openWindow()">Open Window</button>
+<button onclick="ValidateForm()">Validate Form</button>
+<button onclick="closeWindow()">Close Window</button>
+  </body>
+</html>
