@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Use of locate</title>
+
+</head>
+
+<body>
+<p id= "demo">	</p>
+<script>
+var str ="Please locate where locate occurs!";
+var str1 ="Apple, Banana, Kiwi";
+var str2 = "Please visit Microsoft and Microsoft";
+var pos = str.indexOf("locate");
+var pos1 = str.lastIndexOf("locate");
+var pos2 = str.lastIndexOf("John");
+var pos3 = str.indexOf("locate",15);
+var n = str2.replace("Microsoft","W3schools");
+var n1 = str2.replace(/MICROSOFT/i,"W3schools");
+var n2 = str2.replace(/MICROSOFT/g,"W3schools");
+var n3 = str2.replace(/MICROSOFT/ig,"W3schools");
+///////////////////////////////////////////////
+var s1 = str.search("locate");
+var s2 = str1.slice(7,13);
+var s3 = str1.slice(-12,-6);
+var s4 = str1.slice(7);
+var s5 = str1.slice(-12);
+var s6 = str1.substring(7,13);
+var s7 = str1.substr(7,6);
+var s8 = str1.substr(7);
+var s9 = str1.substr(-4);
+//////////////////////for Case/////////////
+var txt1 = "Hello World!" ;
+var t1 = txt1.toUpperCase();
+var t2 = txt1.toLowerCase();
+/////concat()////////////////
+var txt2 = "Hello";
+var txt3 = "World";
+var t3 = txt2.concat(" ",txt3);
+//////////trim///////////
+var strTrim = "              Hello World!";
+var tr = strTrim.trim();
+document.getElementById("demo").innerHTML = pos +" <hr>"+pos1+" <hr>"+pos2+"<hr> "+pos3+" <hr>"+ s1 + "<hr> " + s2+"<hr> "
++ s3 +"<hr> "+s4+"<hr> "+s5+"<hr>substring(): "+s6
++ "<hr>substr():" + s7+"<hr>"+s8+"<hr>"+s9+"<hr>"+n 
++"<hr>"+n1+"<hr>"+n2+"<hr>"+n3+"<hr>"+t1+"<hr>"+t2+"<hr>"+t3+"<hr>"+tr;
+
+</script>
+</body>
+</html>
