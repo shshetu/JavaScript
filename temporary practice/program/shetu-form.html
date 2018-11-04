@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>shetu's form</title>
+    <style>
+      label{
+        color:red;
+      }
+    </style>
+    <script>
+      var win;
+      function openWindow(){
+        win = window.open("","","width=400");
+      }
+      function closeWindow(){
+        win.close;
+      }
+      function validateForm(){
+        /////////////Name declaration/////////////////////
+        var fname = document.myForm.fname.value;
+        var gender = document.myForm.gender.value;
+        var education = "";
+        if(document.myForm.ssc.checked){
+          education += document.myForm.ssc.value;
+        }
+        if(document.myForm.hsc.checked){
+          education += document.myForm.hsc.value;
+        }
+        var round = document.myForm.round.value;
+        var msg = document.myForm.msg.value;
+        //////////////////FOrm validation starts///////
+
+/////////////Name validation field/////////////
+if(fname==""){
+  document.getElementById('fnamex').innerHTML = "Enter your name";
+return false;
+}
+else if(fname.length<3){
+  document.getElementById('fnamex').innerHTML = "Name length should be atleast 3 chracters";
+  return false;
+
+}
+else{
+  document.getElementById('fnamex').innerHTML = "";
+
+}
+/////////////Gender validation field/////////////
+if(gender==""){
+  document.getElementById('gender').innerHTML = " Enter your gender";
+  return false;
+
+}
+else{
+  document.getElementById('gender').innerHTML = "";
+
+}
+/////////////Education validation field/////////////
+ if(!document.myForm.ssc.checked && !document.myForm.hsc.checked ){
+  document.getElementById('education').innerHTML = "Enter your Education";
+return false;
+}
+
+else{
+  document.getElementById('education').innerHTML = "";
+
+}
+
+
+/////////////Round validation field/////////////
+
+if(round=="select a round"){
+  document.getElementById('round').innerHTML = "Enter your Round";
+return false;
+}
+else{
+  document.getElementById('round').innerHTML = "";
+
+}
+
+
+/////////////msg validation field/////////////
+if(msg ==""){
+  document.getElementById('msg').innerHTML = "Enter your message";
+return false;
+}
+else if(msg.length<10){
+  document.getElementById('msg').innerHTML = "Massage length should be atleast 10 characters";
+return false;
+}
+
+
+else{
+  document.getElementById('msg').innerHTML = "";
+
+
+
+/////////////output showing field/////////////
+win.document.write(fname +"<br>");
+win.document.write(gender +"<br>");
+win.document.write(education +"<br>");
+win.document.write(round +"<br>");
+win.document.write(msg +"<br>");
+
+
+
+}
+        //////////////////FOrm validation ends///////
+      }
+    </script>
+  </head>
+  <body>
+<h1>Form with validation</h1>
+<form name="myForm">
+
+
+Name: <input type="text" name="fname"> <label id="fnamex"></label><br>
+Gender:<input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">FeMale<label id="gender"></label><br>
+Education:<input type="checkbox" name="ssc" value="ssc">SSC
+<input type="checkbox" name="hsc" value="hsc">HSC
+<label id="education"></label><br>
+Round:
+<select  name="round">
+<option value="select a round" checked="checked">select a round</option>
+<option value="Round-36">Round-36</option>
+<option value="Round-37">Round-37</option>
+<option value="Round-38">Round-38</option>
+<option value="Round-39">Round-39</option>
+</select> <label id="round"></label> <br>
+<textarea name="msg" rows="8" cols="30"></textarea> <label id="msg"></label><br>
+<input type="reset" value="Reset"><br><br>
+</form>
+<button onclick="openWindow()">Open Window</button>
+<button onclick="validateForm()">Submit</button>
+<button onclick="closeWindow())">Close window</button>
+  </body>
+</html>

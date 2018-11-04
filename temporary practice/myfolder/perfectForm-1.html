@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Perfect form</title>
+
+  </head>
+  <body>
+    <form name="myForm">
+Name:<input type="text" name="fname">
+<label id="fnamex"></label><br>
+Gender: <input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">Female
+<label id="gender"></label><br>
+Education: <input type="checkbox" name="ssc" value="ssc"> SSC
+<input type="checkbox" name="hsc" value="hsc">HSC
+<label id="education"></label><br>
+Round <select  name="round">
+  <option value="Select A Round" selected="selected">Select A Round</option>
+  <option value="Round-36">Round-36</option>
+  <option value="Round-37">Round-37</option>
+  <option value="Round-38">Round-38</option>
+  <option value="Round-39">Round-39</option>
+</select><label id="round"></label><br>
+<textarea name="msg" rows="8" cols="30"></textarea>
+<label id="msg"></label><br>
+   <input type="reset" value="Reset">
+    </form>
+
+    <br><br>
+
+   <button  onclick="openWindow()">Open window</button>
+   <button type="submit" n onclick="validateForm()">Submit</button>
+   <button  name="closeWindow" onclick="closeWindow()">Close Window</button>
+
+    <script>
+      var win;
+      function openWindow(){
+win.open("","","width=400");
+      }
+      function closeWindow(){
+        win.close();
+      }
+      function validateForm(){
+        /////////////For Name//////////////
+        var fname = document.myForm.fname.value;
+        var gender = document.myForm.gender.valu;
+        var education = "";
+        if(document.myForm.ssc.checked){
+          education+=document.myForm.ssc.value;
+        }
+        if(document.myForm.hsc.checked){
+          education+=document.myForm.hsc.value;
+        }
+        var round = document.myForm.round.value;
+        var msg = document.myForm.msg.value;
+        /////////Name Validation////////////////////
+        if(fname ==""){
+          document.getElementById('fnamex').innerHTML="Please Enter your name";
+          return false;
+        }
+        else if (fname.length<3) {
+          document.getElementById('fnamex').innerHTML="Name must be 3 characters";
+return false;
+        }
+        else if(gender==""){
+          document.getElementById('gender').innerHTML="Tell me your gender";
+return false;
+        }
+        else if{
+          document.getElementById('gender').innerHTML="";
+
+        }
+
+        else if(!document.myForm.ssc.checked && !document.myForm.hsc.checked ){
+          document.getElementById('education').innerHTML="Tell me your Education";
+return false;
+        }
+        else if(round =="Select A Round"){
+          document.getElementById('round').innerHTML="Select your Round";
+return false;
+
+        }
+        else if (msg.length<10) {
+          document.getElementById('msg').innerHTML="Atleast 10 characters";
+return false;
+
+}else{
+win.document.write(fname + "<br>");
+win.document.write(gender + "<br>");
+win.document.write(education + "<br>");
+win.document.write(round + "<br>");
+win.document.write(msg + "<br>");
+
+
+}
+      }
+
+    </script>
+  </body>
+</html>
