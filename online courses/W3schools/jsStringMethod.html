@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JS String Method</title>
+  </head>
+
+  <body>
+<p id="demo"></p>
+<script type="text/javascript">
+///////The charAt() Method/////////
+var str = "Hello World";
+var c1 = str.charAt(0);
+
+///////////charCodeAt() Method///////
+var c2 = str.charCodeAt(0);
+////////Propety Access///////////////
+var c3 = str[0];
+
+////////Converting a String to an Array
+var txt = "a,b,c,d,e";
+///////////////////////////
+var c5 = txt.split(" ");
+var c4 = "";
+for(var i=0;i<str.length;i++){
+  c4 += str[i]+"<br>"
+}
+var c6 = txt.split("|");
+////Document Output under same id="demo"
+document.getElementById("demo").innerHTML =
+(c1+" :CharAt(0)<hr>"+"UTF-16 code of H: "+c2
++"<hr>"+ "Property access using str[0]: "+c3+"<hr>"+c4
++"<hr>"+c5);
+</script>
+
+  </body>
+</html>
