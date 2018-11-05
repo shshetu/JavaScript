@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Class prcatice</title>
+</head>
+
+<body>
+<p id ="demo">	</p>
+<script>
+/////////////////
+var x = "Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,";
+var y = x.replace(/microsofr/gi,"W3schools");
+////////////////////////
+var x1 =  "How   are   you doing today?";
+var y1 = x1.split(" ");
+var y2 = x1.split("",3);
+var y3 = x1.split("o");
+
+///////output/////////////
+document.getElementById("demo").innerHTML = y+"<hr>"+y1+"<hr>"+y2+"<hr>"+y3;
+</script>
+</body>
+</html>

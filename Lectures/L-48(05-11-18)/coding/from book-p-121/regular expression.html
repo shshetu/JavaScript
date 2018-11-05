@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Regular expression Methods in strings</title>
+</head>
+
+<body>
+
+<script>
+var matchThis  = "Play it again Sam";
+var stringer1 =  matchThis.match(/sam/i);
+var replaceThis = "This script is embedded in Java.";
+var stringer2 = replaceThis.replace(/Java/g,"HTML");
+var searchThis = "www.sandlight.com";
+var stringer3 = searchThis.slice(searchThis.search(/.com/));
+var splitThis = "She has two important issues";
+var stringer4 = splitThis.split(/two important/i);
+var display = "<h1>Regular Expression Mehtods in String Objects</h1>";
+display += matchThis + " becomes:" + stringer1 +"<br>";
+display += replaceThis + " becomes," + stringer2 +"<br>";
+display += searchThis +" becomes, with the help of string.slice():"+ ""+stringer3 + "<br>";
+display += splitThis + " becomes an array:" +stringer4[0] + "" + stringer4[1] +"<br>";
+var showOff = new String(display);
+document.write(showOff.fontcolor("#972126"));
+</script>
+
+</body>
+</html>

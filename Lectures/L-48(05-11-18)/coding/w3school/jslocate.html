@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Use of locate</title>
+
+</head>
+
+<body>
+<p id= "demo">	</p>
+<script>
+var str ="Please locate where locate occurs!";
+var pos = str.indexOf("locate");
+var pos1 = str.lastIndexOf("locate");
+var pos2 = str.lastIndexOf("John");
+var pos3 = str.indexOf("locate",15);
+
+document.getElementById("demo").innerHTML = pos +"<hr>"+pos1+"<hr>"+pos2+"<hr>"+pos3;
+
+</script>
+</body>
+</html>

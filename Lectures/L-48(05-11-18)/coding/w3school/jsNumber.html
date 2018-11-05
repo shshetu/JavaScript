@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Js number</title>
+</head>
+
+<body>
+<p id="demo"></p>
+<script>
+var a =123;
+var a1 = a.toString();
+var a2 = (123).toString();
+var a3 = (100+23).toString();
+///////////Exponential///////////////
+var b = 9.656;
+var b1 =  b.toExponential(2);///////two digits after decimal with the 10^0
+var b2 =  b.toExponential(4); //////four digits after decimal 
+var b3 =  b.toExponential(6);///////six digits after decimal
+///////////////toFixed() Method///////////
+var c1 = b.toFixed(0);
+ var c2 = b.toFixed(2); ////////returns 9.66
+var c3 = b.toFixed(4); ///////////retruns 9.6560
+var c4 = b.toFixed(6);//////returns 9.656000
+
+////////toPrecision() Method/////////////
+var d = 9.656;
+var d1 = d.toPrecision(); //returns 9.656 no extra
+var d2 = d.toPrecision(2); //returns 9.7 exactly 1 place after decimal 
+var d3 = d.toPrecision(4); //returns 9.656 exactly 3 place after decimal
+var d4 = d.toPrecision(6); // returns 9.65600 exactly 6 place after decimal
+
+//////////The valueOf() method==returns a number as a number////
+var e = 123;
+var e1 = e.valueOf(); //////returns 123 from variabe
+var e2 = (123).valueOf(); ///returns 123 form literal 123
+var e3 = (100+23).valueOf(); //Returns 123 from exprssion 100+23
+
+/////Converting Variable to Numbers//////////
+/*There are 3 JS methods that can be used to convert varbles to nubmers:
+1. The number() method
+2. The parseInt() method
+3. The parseFloat() method
+*/
+
+//////Number() Method ///////////
+var f = Number(true); //since we use Number method so returns 1
+var f1 = Number(false);// returns 0
+var f3 =  Number("10");// retursn 10
+var f4 =  Number(" 10"); // retruns 10
+var f5 =  Number("10 "); //returns 10
+var f6 =  Number("10.33"); // returns 10
+var f7 =  Number("10,33"); // retruns NaN
+var f8 =  Number("10 33"); //returns NaN
+var f9 =  Number("John"); //returns NaN
+var f10 = Number(new Date("2017-09-30")); //returns the number of miliseconds since 1.1.1970
+
+/////////parseInt() method = parses a string and returns a whole number. spaces are not allowed.
+var g = parseInt("10"); //returns 10
+var g1 = parseInt("10.33"); //returns 10
+var g2 = parseInt("10 20 30"); //returns 10 
+var g3 = parseInt("10 years"); //returns 10 
+var g4 = parseInt("years 10"); //returns NaN because it only checks the finst string and there is no number so returns NaN
+
+//Number Properties = MAX_VALUE, MIN_VALUE, POSITIVE_INFINITY, NEGATIVE_INFINITY, NaN 
+var h = Number.MAX_VALUE; //returns the largest possible number in Javascript
+var h1 = Number.MIN_VALUE; //retunrns the smallest possible nubmer in JS
+var h2 = Number.POSITIVE_INFINITY;//returns positive inifinity: Infinity
+var h3 = Number.NEGATIVE_INFINITY;//returns negetive infiinty -Infinity
+var h4 = 100 / "Apple"; ///x wil be NaN(Not Number)
+var h5 = -1/ 0; ///returns -Infinity
+var h6 = Number.NaN; //NaN is a JavaScript reserved word indicating that a number is not a legal number. Trytin to do arithmetic with a non numeric string wil result in NaN (Not a Number)
+var h7 =  100/"Apple" ////x will be NaN(Not a number)
+var h8 = (6).MAX_VALUE; //The value will be undefined
+////////Output///////
+document.getElementById("demo").innerHTML = a1 + "<hr>"+a2+"<hr>"+b1+"<hr>"+b2+"<hr>"+
+b3+"<hr>"+c1 + "<hr>"+c2+"<hr>"+d1+"<hr>"+d2+"<hr>"+d3+"<hr>"+d4+"<hr>"+e1+"<hr>"+e2+"<hr>"+e3+f1+f3+f4+f5+f6+f7+f8+f9+"<hr>"+f10+"<hr>"+g+g1+g2+g3+g4+"<hr>"+h+h1+h2+h3+h4+h5+h6+h7+h8;
+</script>
+
+</body>
+</html>
