@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Arrays</title>
+</head>
+
+<body>
+<h1>JavaScript Arrays</h1>
+<p id="demo"></p>
+<script>
+//Javascript Arrays are used to store multiple values in a single variable. Spaces and line breaks are not important it is a must to use a comma
+var a = ["Saab","Volvo","BMW"];
+var a1 = new Array("Saab","Volvo","BMW");//We can use new Array to declare the array
+//new is a keyword of JavaScript
+
+// Accessing the Elements of an Array
+var b = a[0];
+//changing an Array Elements
+var cars = ["Saab","Volvo","BMW"];
+cars[0] = "Opel";
+
+//Arrays are Object: /*Arrays are a special type of objects.catch(err => {})*/
+//Array Elements Can be Objects
+//Array Properties and Mehtods
+//The length Property
+//Accessing the First Array Element
+//Accessing the Last Array Element
+//Looping Array Elements
+//Adding Array Elements
+//Associative Arrays
+//The Difference Between Arrays and Objects
+//When to Use Arrys. When to use Objects
+//Void new Array()
+//How to recognize an Array
+
+/////outPut
+document.getElementById("demo").innerHTML = a+"<hr>"+a1+"<hr>"+b
++"<hr>"+cars;
+</script>
+</body>
+</html>
