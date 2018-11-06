@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Anchors and Hashes</title>
+</head>
+
+<body onLoad="countAnchors();">
+<h2>Top Level</h2>
+
+<script>
+function countAnchors(){
+alert ("This script has" + document.anchors.length + "anchors.");
+function goAnchors(anchName){
+	location.hash =  anchName;
+	}
+	}
+</script>
+</body>
+</html>

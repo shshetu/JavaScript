@@ -20,7 +20,15 @@ var b = a[0];
 var cars = ["Saab","Volvo","BMW"];
 cars[0] = "Opel";
 
-//Arrays are Object: /*Arrays are a special type of objects.catch(err => {})*/
+//Arrays are Object: 
+/*Arrays are a special type of objects. The typeof operator in JS returns object for arrays. Array uses numbers to access where objects use names to access its "members"*/
+var c = ["John","Doe",46];
+var c1 = c[2];
+
+//objects declaration
+var d = {firstName:"John",lastName:"Doe",age:46};
+var d1 = d.firstName;
+
 //Array Elements Can be Objects
 //Array Properties and Mehtods
 //The length Property
@@ -36,7 +44,7 @@ cars[0] = "Opel";
 
 /////outPut
 document.getElementById("demo").innerHTML = a+"<hr>"+a1+"<hr>"+b
-+"<hr>"+cars;
++"<hr>"+cars+"<hr>"+c1+"<hr>"+d1;
 </script>
 </body>
 </html>

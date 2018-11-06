@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Print prime number form w3 school</title>
+</head>
+
+<body>
+<h1>Print prime number from W3School</h1>
+<p id="test"></p>
+<script>
+function test_prime(n){
+if(n==1){return false;}
+else if(n==2){return true;}
+else{
+	for(var x=2;x<n;x++){	if(n%x == 0){ return false;} 	
+								} return true;
+	}
+}
+function printPrime(sn,en){
+	for (sn;sn<en;sn++){}
+	}
+document.getElementById("test").innerHTML = test_prime(37) ;
+</script>
+
+</body>
+</html>
