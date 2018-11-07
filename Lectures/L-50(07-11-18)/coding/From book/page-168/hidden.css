@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family : verdana;
+	font-size:16pt;
+	text-align:center;
+	background-color:ffdb18;
+	}
+	.fontA{color:red}
+		.fontA{color:green}
+			.fontA{color:cyan}
+				.fontA{color:aqua}
+				.fontDriver{
+					color:e43b24;
+					background-color:062456;
+					}

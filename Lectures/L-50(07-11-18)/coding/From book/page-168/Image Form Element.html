@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Image Form Element</title>
+<script>
+function lovesMe(){
+	var cupid = Math.random();
+	cupid = Math.floor(cupid*100);
+	var throb = "";
+
+	if(cupid>50){
+		throb = "He loves me!";
+		//Change the gender pronoun to your preferences
+		}
+		else{
+			throb ="He love me not.......";}
+			alert(throb);
+			}
+</script>
+
+</head>
+
+<body>
+<center>
+<form name="heart">
+Click the heart five times to learn how he feels about you!
+<input type="image" src="heart.jpg" name="ache" onClick="lovesMe()" border="0"> If the answer is incorrect , click th button five more times......
+</form>
+</center>
+</body>
+</html>

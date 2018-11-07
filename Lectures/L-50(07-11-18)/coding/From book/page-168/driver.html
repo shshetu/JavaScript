@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="hidden.css">
+<title>Driver</title>
+<script>
+function goLeft(){
+	
+	var left = parent.info.document.position.hereL.value;
+	parent.info.location =  left;
+	}
+	function goRight(){
+		var right = parent.info.document.position.hereR.value;
+		parent.info.location = right;
+		}
+
+
+
+</script>
+</head>
+
+<body>
+<div class="forntDriver">Click one of the buttons below
+</div>
+<form name="direction">
+<input type="button" value="<=Left" onClick ="goLeft()">
+<input type="button" value="Right=>" onClick="goRight()">
+
+</form>
+</body>
+</html>
