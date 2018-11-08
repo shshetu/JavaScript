@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Read and Write Cookie</title>
+<script>
+function yourCookie(name){
+	var remain = new Date("November 9,2005");
+	document.cookie = escape(name + document.baker.myCookie.value + ");
+	expires="+ remain.to GMTString()+";");
+	
+	}
+	function welcomeBack(){
+		var seeMe = unescape(document.cookie);
+		var tag = seeMe.indexOf(";");
+		seeMe = seeMe.substring(11,tagIt);
+		alert("Hello there" +seeMe);
+		}
+</script>
+</head>
+
+<body onLoad="document.baker.reset()">
+<div id="display"> &nbsp;</div>
+</body>
+</html>
