@@ -20,31 +20,80 @@ var b = a[0];
 var cars = ["Saab","Volvo","BMW"];
 cars[0] = "Opel";
 
-//Arrays are Object: 
-/*Arrays are a special type of objects. The typeof operator in JS returns object for arrays. Array uses numbers to access where objects use names to access its "members"*/
+//Arrays are Object:
+/*Arrays are a special type of objects.
+ The typeof operator in JS returns object for arrays.
+ Array uses numbers to access
+ where objects use names to access its "members"*/
 var c = ["John","Doe",46];
 var c1 = c[2];
 
 //objects declaration
-var d = {firstName:"John",lastName:"Doe",age:46};
-var d1 = d.firstName;
+var person = {firstName:"John" ,lastName:"Doe",age:46};
+var d = person.firstName;
 
 //Array Elements Can be Objects
+/*Definition:
+JavaScript variables can be objects. arrays are special
+kind of objects.
+*/
+
 //Array Properties and Mehtods
+/*The real strenth of JavaScript arrats are the built-in
+array properties and methods*/
+var e = a.length; //Here length is a property
+var e1 = a.sort(); //Sort is a method
+
 //The length Property
+/*The length property is always one more than the
+higest are index. that means if the highest array index is
+2 then length will be 3*/
+
 //Accessing the First Array Element
+var fruits =["Banana","Orange","Apple","Mango"];
+var first = fruits[0];
+
 //Accessing the Last Array Element
+var last = fruits[fruits.length -1]; //Great way fruits.length-1
+
 //Looping Array Elements
+/*The safest way to loop through an array, is using
+a for loop*/
+
+var f,flen,f1,i;
+f =["Banana","Orange","Apple","Mango"];
+flen = f.length;
+f1 = "<ul>";
+//for(i = 0;i){}
+
+
+
 //Adding Array Elements
+var g = ["Banana","Orange","Apple"];
+var g1 = g.push("kiwi\n");
+/*New elements can also be added using the length property*/
+
+var g2 = g[g.length];
+
+
+
 //Associative Arrays
+
 //The Difference Between Arrays and Objects
+
 //When to Use Arrys. When to use Objects
-//Void new Array()
+
+//AVoid new Array()
+var points = [40,100,1,5,25];
+
+
+
 //How to recognize an Array
 
 /////outPut
 document.getElementById("demo").innerHTML = a+"<hr>"+a1+"<hr>"+b
-+"<hr>"+cars+"<hr>"+c1+"<hr>"+d1;
++"<hr>"+cars+"<hr>"+c1+"<hr>"+d+"<hr>"+e+"<hr>"+e1+"<hr>"+first+"<hr>"+last
++"<hr />"+ g + g1 +"<hr />"+points;
 </script>
 </body>
 </html>

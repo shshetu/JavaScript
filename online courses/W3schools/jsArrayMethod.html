@@ -6,26 +6,55 @@
   </head>
   <body>
 
+<p id="demo"></p>
   <script type="text/javascript">
+
 //JavaScript Array Methods
 
 //Converting Arrays to Strings
+/*toString converts an array to string*/
+var fruits = ["Banana","Orange","Apple","Mango"];
+var fr =  fruits.toString();
+
+//alternative to array method(join method)
+var a = ["Banana","Orange","Apple","Mango"];
+var a1 = a.join("*#");
+
 //Popping and Pushing
 //Popping
 //Pushing
 //Shifting Elements
 //changing Elements
 //Deleting Elements
+
+//var b1 = delete b[0]; //results in undefined
 //Splicing an Array
+var b = ["A","B","C","D"];
 //Using splice() to Remove Elements
+var b2 = b.splice(0,3,"E","F","G");
+
+var b1 = b.splice(1,3);
+//var b2 =  b.splice(1,2,"E");
+//var b3 = b.splice(0,1);
+
 //Merging(Concatenating) Arrays
+var myGirls = ["Cercilie","Lone"];
+var myBoys =  ["Emil","Tobies","Linus"];
+var c = myGirls.concat(myBoys);
+
 //Slicing an Array
 //Automatic toString()
+var d = ["Banana","Orange","Apple","Mango"];
+var d1 =  d.toString();
 //Finding Max and Min Values in an Arrays
+
+//Array Referrence:
 
 
 
     //Output
+    document.getElementById("demo").innerHTML = fr+"<hr>"+a1+"<hr>"
+    +b+"<hr />"+b1+"<hr />"+c+"<hr />"+d+"<hr />"+d1;
   </script>
   </body>
 </html>

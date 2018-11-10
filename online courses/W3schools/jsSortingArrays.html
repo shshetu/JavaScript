@@ -5,12 +5,28 @@
     <title>JavaScript Sorting Arrays</title>
   </head>
   <body>
-
+<p id="demo"></p>
 <script type="text/javascript">
 
 //Soritng an Arrays
+var a =["Banana","Orange","Apple","Mango"];
+var a1 = a.sort();
+
+
 //Reversing an Arrays
+var a2 =  a.reverse();
+
+
 //Numeric Sort
+var points = [40,100,1,5,23,1];
+var b = function myFunction(){
+points.sort(function(a,b)
+{
+  return a-b;
+}
+)
+}
+
 //The Compare Function
 //Sorting an Array in Random Order
 //Find the Highest (or Lowest) Array Values
@@ -21,7 +37,8 @@
 
 
   //Output
-
+document.getElementById("demo").innerHTML = a1+"<hr />"+a2
++ b;
 
 </script>
   </body>
