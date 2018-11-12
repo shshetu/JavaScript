@@ -5,9 +5,21 @@
     <title>JavaScript Set Date Methods</title>
   </head>
   <body>
+  <p id="demo"></p>
 <script type="text/javascript">
 
   //Set Date Methods
+  var d = new Date();
+  var d1 = new Date(2018,11,24,10,33,30); //year,month,day,hour,minute,seconds
+  var d2 = new Date(2018,11,24,10,33); //year,month,day,hour,minute
+  var d3 = new Date(2018,11,24,10); //year,month,day,hour
+  var d4 = new Date(2018,11,24); //year,month,day
+  var d5 = new Date(99,11,24); //19th century year,month,day
+  var d6 = new Date(9,11,24); //19th century year,month,day
+  var d7 = new Date(0); //retruns milliseconds
+var d8 = d.toUTCString();//returns UTC time string
+var d9 = d.toDateString();//returns Date string in readable format
+
   //The setFullYear() Method
   //The setMonth() Method
   //The setDate() Method
@@ -17,7 +29,9 @@
   //Compare Dates
 
   //output
-
+document.getElementById("demo").innerHTML = d+"<hr>"+d2+"<hr>"+d3+"<hr>"+d4+"<hr>"+d5
++"<hr>"+d6+d7+d8+d9
+;
 </script>
   </body>
 </html>

@@ -29,19 +29,22 @@ points.sort(function(a,b)
 
 //The Compare Function
 //Sorting an Array in Random Order
-var b1 =point.sort(function(a,b){return a-b});
-var b2 = point.sort(function(a,b){return b-a});
 
 //Find the Highest (or Lowest) Array Values
+var b1 = points.sort(function(a,b){return a-b});
+var b2 = points.sort(function(a,b){return b-a});
+
 // Using Math.max() on an Arrays
+//var b3 = points.Math.max.apply();
 // Using Math.min() on an Array
 // My Min/Max Javascript Methods
 //Sorting object Arrays
-
+var cars =[{type:"Volvo",year:2016},{type:"Saab",year:2001},{type:"BMW",year:2010}];
+var c = cars.sort(function(a,b){return a.year - b.year});
 
   //Output
 document.getElementById("demo").innerHTML = a1+"<hr />"+a2
-+ b;
++"<hr>" +b1+"<hr>"+b2+"<hr>"+c;
 
 </script>
   </body>

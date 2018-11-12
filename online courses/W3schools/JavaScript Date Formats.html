@@ -5,10 +5,14 @@
     <title>JavaScript Date Formats</title>
   </head>
   <body>
+  <p id = "demo"></p>
 <script type="text/javascript">
 //  JavaScript Date Input
 //  JavaScript Date Output
 //  JavaScript ISO Dates
+var d = new Date("2015-03-25");
+var d1 = new Date("2015");
+var d2 = new Date("2015/03/25");
 //  ISO Dates (Year and Month)
 //  ISO Dates (Only Year)
 //  ISO Dates (Date-Time)
@@ -19,7 +23,7 @@
 //  Date Input - Parsing Dates
 
   //output
-
+document.getElementById("demo").innerHTML = d+"<hr>"+d1+"<hr>"+d2;
 </script>
   </body>
 </html>
