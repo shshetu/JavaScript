@@ -1,0 +1,54 @@
+<html>
+<head>
+
+<script>
+var win;
+///////////////For NAME/////////////
+var fname = document.fname.fanamex.value;
+var gender = document.fname.gender.value;
+var education = "";
+if(document.fname.education.ssc.checked){
+education+=document.fname.ssc.value;
+}
+if(document.fname.education.hsc.checked){
+education+=document.fname.hsc.value;
+}
+var round = document.fname.round.value;
+var msg = document.fname.msg.value;
+////////Name validation///////////
+
+
+////////Gender Validaton////////////////
+////////////Education///////////////////
+//////////////Round validation//////////////
+/////////////////msg validation//////////////
+
+//////////Output/////////////////
+</script>
+</head>
+<body>
+<h1>Form with perfect validation</h1>
+<form name="fname">
+Name: <input type="text" name = "fnamex"> <label id="fnamex"></label><br>
+gender: <input type="radio" name = "male" value="Male">Male
+<input type="radio" name = "male" value="Female">Female <label id="gender"></label><br>
+Education: <input type="checkbox" name="ssc" value ="SSC">SSC
+<input type="checkbox" name="hsc" value ="HSC">HSC <label id="education"></label><br>
+Round: <select name="round">
+<option value="select a round" selected="selected">Select A Round</option>
+<option value="Round 36" >Round 36</option>
+<option value="Round 37" >Round 37</option>
+<option value="Round 38" >Round 38</option>
+<option value="Round 39" >Round 39</option>
+<option value="Round 40" >Round 40</option>
+</select><label id="round"></label><br>
+
+<textarea cols="20" rows="5"></textarea><label id="msg"></label><br>
+<input type="reset" value="Reset">
+</form>
+<button onclick="validateForm()">Submit</button>
+</body>
+
+
+
+</html>
