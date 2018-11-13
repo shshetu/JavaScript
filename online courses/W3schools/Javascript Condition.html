@@ -2,20 +2,110 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>JavaScript if else and else if/title>
+    <title>use of if-else-if</title>
+    <script type="text/javascript">
+    /////////Switch expression////////
+    function switchCase(){
+switch(new Date().getDay()){
+  default: day="No day!";
+case 0: day ="Sunday";
+break;
+case 1: day ="Monday";
+break;
+case 2: day ="Tuesday";
+break;
+case 3: day ="Wednesday";
+break;
+case 4: day ="Thursday";
+break;
+case 5: day ="Friday";
+break;
+case 6: day ="Saturday";
+break;
+
+}
+document.getElementById("switching").innerHTML = day;
+
+    }
+
+    ////////////////////////
+      function myFunction(){
+    var hour = new Date().getHours();
+    var greeting;
+    if(hour<18){
+    greeting = "Good Day!";
+
+    }
+    else{
+    greeting =  "Good Evening!";
+
+    }
+    document.getElementById("demo").innerHTML = greeting;
+      }
+      //////////////////////////
+      function myFunction1(){
+    var hour = new Date().getHours();
+    var greeting;
+    if(hour<10){
+    greeting = "Good Morning!";
+
+    }
+    else if (hour<20){
+    greeting =  "Good Day!";
+
+    }
+    else{
+greeting = "Good Evening!";
+
+    }
+    document.getElementById("demo").innerHTML = greeting;
+      }
+
+      ///////////////Switch-Common code blocks///////////////
+function switchCommon(){
+      switch (new Date().getDay()) {
+        case 4:
+        case 5: text = "Soon it is weekend!";
+        break;
+        case 0:
+        case 6: text = "it is weekend!";
+
+          break;
+       default: text = "Looking forward to the weekend";
+
+      }
+document.getElementById("sc").innerHTML = text;
+    }
+    /////////////////////////////////////////
+    ///////Switch : strict comparison////////////////
+    function switchStrictCOmparison(){
+var x = "0";
+switch (x) {
+  case 0: text="Off";
+    break;
+    case 1: text = "On";
+    break;
+  default: text = "no value found";
+
+}
+
+  document.getElementById('sSC').innerHTML= text ;
+    }
+    </script>
   </head>
   <body>
-<script type="text/javascript">
+    <h1>If else Statement</h1>
+    <button onclick="myFunction()">if-else</button>
+  <p id="demo"></p>
 
+  <button onclick="myFunction1()">if-else-if</button>
+<span id="demo1"></span>
+<input type="button"  value="switch" onclick="switchCase()">
+<p id="switching"></p>
+<button onclick="switchCommon()">Switch common</button>
+<p id="sc"></p>
+<button onclick="switchStrictCOmparison()">Switch Strict comparison</button>
+<p id="sSC"></p>
 
-  //Conditional Statements
-  //The if Statement
-  //The else Statement
-
-  //The else if Statement
-
-  //output
-
-</script>
   </body>
 </html>
