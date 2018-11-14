@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript regular expression patters</title>
+<script type="text/javascript">
+  ////////////String replace() with a string///
+function myFun1(){
+  var str = "Visit Microsoft!";
+  var res = str.replace(/Microsoft/gi,"W3schools!");
+  document.getElementById("demo1").innerHTML = res ;
+}
+
+/////////Regular expression to match any given alphabet ///////////
+function myFun2(){
+  var str = "Is this all there is?";
+  var result = str.match(/[h]/g);
+  document.getElementById("demo1").innerHTML = result ;
+
+}/////////Regular expression to match any given digit ///////////
+
+function myFun3(){
+  var str = "123456789";
+  var result = str.match(/[1-4]/g);
+  document.getElementById("demo1").innerHTML = result ;
+
+  /////////Regular expression to match any given alternative ///////////
+
+}
+function myFun4(){
+  var str = "re, green, red, green,gren,gr,blue,yellow";
+  var result = str.match(/(red|green)/g);
+  document.getElementById("demo1").innerHTML = result ;
+
+
+}
+function myFun5(){
+  document.getElementById("demo1").innerHTML = res ;
+
+}
+function myFun6(){
+  document.getElementById("demo1").innerHTML = res ;
+
+}
+</script>
+  </head>
+  <body>
+    <button onclick="myFun1()">replace</button>
+      <p id="demo1"></p>
+
+    <button onclick="myFun2()">find h using RegExp</button>
+      <p id="demo2"></p>
+    <button onclick="myFun3()">find number using RegExp</button>
+      <p id="demo3"></p>
+    <button onclick="myFun4()">find alternative using RegExp</button>
+      <p id="demo4"></p>
+    <button onclick="myFun5()"></button>
+      <p id="demo5"></p>
+    <button onclick="myFun6()"></button>
+      <p id="demo6"></p>
+  </body>
+</html>
