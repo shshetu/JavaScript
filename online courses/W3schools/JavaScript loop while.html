@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript while loop</title>
+    <script type="text/javascript">
+//////While loop/////////////
+function myFun(){
+var text = "";
+var i = 0;
+while(i<10){
+  text+= i +"<br>";
+  i++;
+}
+document.getElementById("demo").innerHTML = text;
+}
+//////////////Use of do while loop////////////
+function myfun1(){
+var i = 0;
+var text = "";
+do{
+text += i + "<br>";
+i++;
+}
+  while(i<10);
+  document.getElementById("demo1").innerHTML = text;
+}
+
+
+    </script>
+  </head>
+  <body>
+<p id="demo"></p>
+<button onclick="myFun()">while loop</button>
+
+<p id="demo1"></p>
+<button onclick="myfun1()">Do while loop</button>
+
+<p id="demo2"></p>
+<button onclick="myfun2()"></button>
+
+<p id="demo3"></p>
+<button onclick="myfun3()"></button>
+
+<p id="demo4"></p>
+<button onclick="myfun4()"></button>
+
+<p id="demo5"></p>
+<button onclick="myfun5()"></button>
+
+<p id="demo6"></p>
+<button onclick="myfun6()"></button>
+
+  </body>
+</html>

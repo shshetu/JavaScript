@@ -11,31 +11,75 @@
 	 for(var i=1;i<=cars.length;i++)
 	 {
 		 text += cars[i] +"<br>";
-		
+
 		 }
 		  document.getElementById("demo").innerHTML = text;
 	  }
-  
+
   //////////////////////////////////////////////////////
     function num(){
 	  var text = "";
 	 for(var i=1;i<=5;i++)
 	 {
 		 text += i +"<br>";
-		
+
 		 }
 		  document.getElementById("demo").innerHTML = text;
 	  }
-  
+
 
   /////////////////////////////////////////////////////
+  ////////////////We can omit statement 1 of for loop///
+  function forLoop(){
+var text = "";
+var i=2;
+for(;i<5;i++){
+  text += i +"<br>";
+}
+    document.getElementById("demo2").innerHTML = text;
+  }
+  ///////////////statement 3 example//////////////
+  function forLoop1(){
+var carss =["TOyoyta","COrolla"];
+var i = 0;
+var text = "";
+for(;i<carss.length;){
+
+text += carss[i]+ "<br>";
+i++;
+
+}
+document.getElementById("demo3").innerHTML = text ;
+  }
+
+  /////////////////////Use of in loop///////////////
+function forIn(){
+var person = {fname:"John",lname:"DOe",age:25};
+var text ="";
+  for (var x in person){
+text += person[x]+"<br>";
+
+  }
+  document.getElementById("demo4").innerHTML = text ;
+}
+
+
+
+  //////////////////End of in statement/////////////////////
   </script>
-  
+
   </head>
   <body>
   <button onClick="cars()">Click to see the cars!!</button>
 <p id="demo"></p>
 <button onClick="num()">Numbers!!</button>
 <p id="demo1"></p>
+<button onClick="forLoop()">for loop!!</button>
+<p id="demo2"></p>
+<button onClick="forLoop1()">for loop withour 3rd statement!!</button>
+<p id="demo3"></p>
+<button onClick="forIn()">Use of in statement!!</button>
+<p id="demo4"></p>
+
   </body>
 </html>

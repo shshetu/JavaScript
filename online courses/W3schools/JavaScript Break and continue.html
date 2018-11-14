@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript break and continue</title>
+    <script type="text/javascript">
+function myFun1(){
+var text = "";
+var i;
+for (i=0;i<10;i++){
+  if(i==3){break;}
+  text+= i + "<br>";
+}
+document.getElementById("demo1").innerHTML= text;
+}
+///////////COntinue statement//////////
+function myFun2(){
+var text = "";
+var i;
+for (i=0;i<10;i++){
+  if(i==3){continue;}
+  text+= i + "<br>";
+}
+document.getElementById("demo2").innerHTML= text;
+}
+//////////////////////////
+
+////////use of list in javascript break/////////////
+function myFun3(){
+  var cars =["BMW","Volvo","Saab","Ford"];
+  var text = "";
+  list:{
+    text+=cars[0]+ "<br>";
+    text+=cars[1]+ "<br>";
+    break list;
+    text+=cars[2]+ "<br>";
+    text+=cars[3]+ "<br>";
+
+  }
+  document.getElementById("demo3").innerHTML = text;
+}
+    </script>
+  </head>
+  <body>
+<button onclick="myFun1()">Use of break statement</button>
+<p id="demo1"></p>
+<button onclick="myFun2()">COntinue statement</button>
+<p id="demo2"></p>
+<button onclick="myFun3()">Use of list!</button>
+<p id="demo3"></p>
+<button onclick="myFun4"></button>
+<p id="demo4"></p>
+<!-- <button onclick="myFun1"></button>
+<p id="demo1"></p>
+<button onclick="myFun1"></button>
+<p id="demo1"></p>
+<button onclick="myFun1"></button>
+<p id="demo1"></p>
+<button onclick="myFun1"></button>
+<p id="demo1"></p> -->
+  </body>
+</html>
