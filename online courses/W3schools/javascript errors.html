@@ -2,15 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Javascript regular expression patters</title>
+    <title>Javascript Errors</title>
 <script type="text/javascript">
   ////////////String replace() with a string///
 function myFun1(){
-  var str = "Visit Microsoft!";
-  var res = str.replace(/Microsoft/gi,"W3schools!");
-  document.getElementById("demo1").innerHTML = res ;
+  try{
+    adddlert("Welcome guest!");
+  }
+  catch(err){
+  document.getElementById("demo1").innerHTML = err.message ;
 }
-
+}
 /////////Regular expression to match any given alphabet ///////////
 function myFun2(){
   var str = "Is this all there is?";
@@ -108,7 +110,7 @@ function myFun13(){
 </script>
   </head>
   <body>
-    <button onclick="myFun1()">replace</button>
+    <button onclick="myFun1()">try() and catch(err)</button>
       <p id="demo1"></p>
 
     <button onclick="myFun2()">find h using RegExp</button>
