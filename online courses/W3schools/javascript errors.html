@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Javascript Errors</title>
 <script type="text/javascript">
-  ////////////String replace() with a string///
+  ////////////try and catch///
 function myFun1(){
   try{
     adddlert("Welcome guest!");
@@ -13,18 +13,44 @@ function myFun1(){
   document.getElementById("demo1").innerHTML = err.message ;
 }
 }
-/////////Regular expression to match any given alphabet ///////////
+/////////try and catch for a particular value ///////////
 function myFun2(){
-  var str = "Is this all there is?";
-  var result = str.match(/[h]/g);
-  document.getElementById("demo2").innerHTML = result ;
-
+ var message,x;
+ message = document.getElementById("demo2");
+ message.innerHTML = "";
+ x = document.getElementById("demo").value;
+ try{
+	 if(x == "") throw "empty";
+	 if(isNaN(x)) throw "not a number";
+	 x = Number(x);
+	 if(x<5) throw "too low";
+	 if(x>10) throw "too high";
+	 }
+	 
+	 catch(a){
+		 
+		 message.innerHTML = "Input is "+a;
+		 }
 }/////////Regular expression to match any given digit ///////////
 
 function myFun3(){
-  var str = "123456789";
-  var result = str.match(/[1-4]/g);
-  document.getElementById("demo3").innerHTML = result ;
+ var message,x;
+ message = document.getElementById("demo3").innerHTML = "";
+ x = document .getElementById("d").value;
+ try{
+	 if(x == "") throw "is empty";
+	 if(isNaN(x)) throw "is not a number";
+	 x = Number(x);
+	 if(x>10) throw "is too high";
+	 if(x<5) throw "is too low";
+	 }
+ catch(err){
+	 message.innerHTML = "Input" + err;
+	 }
+ finally{
+	 
+	 document.getElementById("d").value = "";
+	 }
 
   /////////Regular expression to match any given alternative ///////////
 
@@ -112,13 +138,20 @@ function myFun13(){
   <body>
     <button onclick="myFun1()">try() and catch(err)</button>
       <p id="demo1"></p>
-
-    <button onclick="myFun2()">find h using RegExp</button>
+<input id="demo" type="text">
+    <button onclick="myFun2()">using try(),catch()</button>
       <p id="demo2"></p>
-    <button onclick="myFun3()">find number using RegExp</button>
+      <!-----=========================----->
+      <input type="text" id="d">
+    <button onclick="myFun3()">try,catch and finally</button>
       <p id="demo3"></p>
+            <!-----=========================----->
+
+  
     <button onclick="myFun4()">find alternative using RegExp</button>
       <p id="demo4"></p>
+            <!-----=========================----->
+
     <button onclick="myFun5()">Find digit using Metacharacter</button>
       <p id="demo5"></p>
     <button onclick="myFun6()">Find white space using Metacharacter</button>
