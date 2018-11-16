@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript Let</title>
+
+  </head>
+  <body>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script type="text/javascript">
+///////////Use of let and var
+  var x = 10;
+  {
+    let x = 2;
+  }
+  document.getElementById("demo1").innerHTML = x;
+
+////////////Use of let in loop scope
+let i = 5;
+for(let i=0;i<10;i++){
+  //Some statements
+}
+  document.getElementById("demo2").innerHTML = i;
+</script>
+
+  </body>
+</html>

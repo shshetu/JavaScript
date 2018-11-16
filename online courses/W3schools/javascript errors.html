@@ -26,71 +26,85 @@ function myFun2(){
 	 if(x<5) throw "too low";
 	 if(x>10) throw "too high";
 	 }
-	 
-	 catch(a){
-		 
-		 message.innerHTML = "Input is "+a;
+
+	 catch(err){
+
+		 message.innerHTML = err;
 		 }
 }/////////Regular expression to match any given digit ///////////
 
 function myFun3(){
- var message,x;
- message = document.getElementById("demo3").innerHTML = "";
- x = document .getElementById("d").value;
- try{
-	 if(x == "") throw "is empty";
-	 if(isNaN(x)) throw "is not a number";
-	 x = Number(x);
-	 if(x>10) throw "is too high";
-	 if(x<5) throw "is too low";
-	 }
- catch(err){
-	 message.innerHTML = "Input" + err;
-	 }
- finally{
-	 
-	 document.getElementById("d").value = "";
-	 }
-
-  /////////Regular expression to match any given alternative ///////////
-
+var message, x;
+message = document.getElementById("demo3");
+message.innerHTML ="";
+x = document.getElementById("d").value;
+try{
+  if (x=="") throw "is empty";
+  if(isNaN(x)) throw "is not a number";
+  x = Number(x);
+  if(x<5) throw "too low";
+  if(x>10) throw "too high";
 }
+catch(err){
+message.innerHTML = "input is: " + err;
+}
+finally{
+  document.getElementById("d").value = "";
+}
+}
+  /////////Range Error ///////////
+
+
 function myFun4(){
-  var str = "re, green, red, green,gren,gr,blue,yellow";
-  var result = str.match(/(red|green)/g);
-  document.getElementById("demo4").innerHTML = result ;
-
-
+var num =1;
+try{
+  num.toPrecision(500);
+}
+catch(err){
+  document.getElementById("demo4").innerHTML = err.name;
+}
 }
 
-/////////Metacharacter to find digits/////////////////
+/////////Referrence Error/////////////////
 function myFun5(){
-  var str = "Give 100%";
-  var res = str.match(/\d/g);
-  document.getElementById("demo5").innerHTML = res ;
-
+var x;
+try {
+  x = y+1;
 }
+catch(err)
+{
+document.getElementById("demo5").innerHTML = err.name;
+}}
+///////////////////Syntax Error////////////////////
+
 function myFun6(){
-  var str = "Is this all there is?";
-  var res = str.match(/\s/g);
-
-  document.getElementById("demo6").innerHTML = res ;
+  try{
+    eval("alert('Hello)");
+  }
+  catch(err){
+    document.getElementById("demo6").innerHTML = err.name;
+  }
 
 }
+////////////Type Error/////////////
 function myFun7(){
-  var str = "Visit W3Schools";
-  var res = str.match(/\bW3/g);
-
-  document.getElementById("demo7").innerHTML = res ;
-
+  var num =1 ;
+  try{
+    num.toUpperCase();
+  }
+  catch(err)
+  {
+    document.getElementById("demo7").innerHTML = err.name;
+  }
 }
-////////////////Unicode find by Metacharacter
+////////////URI Error///////////////
 function myFun8(){
-  var str = "Visit W3Schools.Hello World!";
-  var res = str.match(/\u0057/g);
-
-  document.getElementById("demo8").innerHTML = res ;
-
+try{
+  decodeURI("% % %");
+}
+catch(err){
+  document.getElementById("demo8").innerHTML= err.name;
+}
 }
 //////////Use of quantifiers////////////////////
 function myFun9(){
@@ -147,18 +161,18 @@ function myFun13(){
       <p id="demo3"></p>
             <!-----=========================----->
 
-  
-    <button onclick="myFun4()">find alternative using RegExp</button>
+
+    <button onclick="myFun4()">Range Error</button>
       <p id="demo4"></p>
             <!-----=========================----->
 
-    <button onclick="myFun5()">Find digit using Metacharacter</button>
+    <button onclick="myFun5()">Referrence Error</button>
       <p id="demo5"></p>
-    <button onclick="myFun6()">Find white space using Metacharacter</button>
+    <button onclick="myFun6()">Syntax error</button>
       <p id="demo6"></p>
-    <button onclick="myFun7()">Find the match</button>
+    <button onclick="myFun7()">Type error</button>
       <p id="demo7"></p>
-    <button onclick="myFun8()">Find unicode</button>
+    <button onclick="myFun8()">Unicode error</button>
       <p id="demo8"></p>
     <button onclick="myFun9()">n+:match any string having atleast one n</button>
       <p id="demo9"></p>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript this keyword</title>
+
+  </head>
+
+  <body>
+    <button onclick="this.style.display='none'">Click to remove me!</button>
+
+    <p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script >
+////Creatnig an Object
+/*var person = {
+  firstName : "John",
+  lastName : "Doe",
+  id: 4445,
+  fullName: function(){
+    return this.firstName + this.lastName;
+  }
+};*/
+
+///Creatnig an Object again
+var person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 3344,
+  fullName: function()
+  {
+    return this.firstName +" " +this.lastName;
+  }
+
+};
+
+
+
+
+
+
+///Display data from the object
+document.getElementById("demo1").innerHTML = person.fullName();
+/////This Alone
+document.getElementById("demo2").innerHTML = myFunction();
+function myFunction(){ return this;}
+
+/////Object Method binding
+var person ={
+  firstName: "shetu",
+  lastName: "shahriar",
+  age: 24,
+  id:1247166,
+  myFunction: function(){
+    return this
+  }
+};
+document.getElementById("demo3").innerHTML = person.myFunction();
+
+///Explicit function binding
+var person1 = {
+  fullName: function(){
+    return this.firstName + this.lastName;
+  }
+};
+var person2 = {
+  firstName:"John ",
+  lastName:"Doe",
+};
+var x = person1.fullName.call(person2);
+document.getElementById("demo4").innerHTML =  x;
+
+
+</script>
+  </body>
+</html>
