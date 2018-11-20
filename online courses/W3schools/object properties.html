@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Object properties</title>
+</head>
+
+<body>
+<button onClick="objectCall1()">Click to see the object properties</button>
+<p id="demo1"></p>
+<button onClick="objectCall2()">Second way to call object</button>
+<p id="demo2"></p>
+<button onClick="objectCall3()">Click to use for--in</button>
+<p id="demo3"></p>
+
+
+
+<script>
+////////////Assigning object//////////
+function objectCall1(){
+var person = {
+	firstName : "John ",
+	lastName : "Doe",
+	age: 30,
+	eyeColor: "blue"
+	};
+	
+document.getElementById("demo1").innerHTML = person.firstName
++ person.lastName; 
+}
+
+
+
+///////////// Secondway to call an object//////////
+function objectCall2(){
+var person = {
+	firstName : "John ",
+	lastName : "Doe",
+	age: 30,
+	eyeColor: "blue"
+	};
+	
+document.getElementById("demo2").innerHTML = person["firstName"]
++ person["lastName"]; 
+}
+
+
+///////////Using for----in statement /////////////////
+function objectCall3(){
+var txt = "";
+var person ={	fname:"John ", lname:"Doe ",age:25 };
+for(var x in person){
+	txt += person[x];
+	
+	}	
+document.getElementById("demo3").innerHTML = txt; 
+}
+
+///////////
+
+</script>
+</body>
+</html>
