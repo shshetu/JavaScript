@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Js getters and setters</title>
+  </head>
+  <body>
+<script type="text/javascript">
+
+
+  const person = {
+    firstName: 'Mosh ',
+    lastName : 'Hamedani',
+    get fullName(){
+      return person.firstName + person.lastName;
+    },
+    set fullName(value){
+      const parts = value.split (' ');
+      this.firstName = parts[0];
+      this.lastName = parts[1];
+    }
+  };
+  person.fullName = 'John Smith';
+  console.log(person);// one problem is it is read only
+  //Second problem is we can't change it from outside the function
+  //Third issue is we don't want to use it as method that's why we
+  //use getters and setters
+  //getters => access properities
+  //=> setter => change(mutate them)
+</script>
+  </body>
+</html>
