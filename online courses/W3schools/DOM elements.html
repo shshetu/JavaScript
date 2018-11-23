@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dom elements</title>
+</head>
+
+<body>
+<button onClick="f1()">elements by tag name</button>
+
+<p>Hello World!</p>
+<p>This example demonstrates the getElementsByTagName Method</p>
+<p id="demo1"></p>
+
+<!----Finding HTML elements by CSS selectors----->
+<button onClick="f2()">elements by query selector</button>
+
+<p>Hello World!</p>
+<p class="intro">This example demonstrates the querySelectorAll method.</p>
+<p id="demo2"></p>
+
+<!----Finding HTML elements by CSS selectors----->
+
+<script>
+function f1(){
+var x = document.getElementsByTagName("p");
+document.getElementById("demo1").innerHTML = "The text in first paragraph (index 0 ) is:" +x[0].innerHTML;	
+	
+}
+
+
+//Finding HTML elements by CSS selectors
+function f2(){
+var x = document.querySelectorAll("p.intro");
+document.getElementById("demo2").innerHTML = "The first paragraph(index 0 ) with class = 'intro': "	+x[4].innerHTML ;
+	
+	}
+
+</script>
+
+
+
+</body>
+</html>
