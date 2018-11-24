@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS Cookies</title>
+</head>
+
+<body>
+<script>
+/*Cookies are data , stored in samll text files, on our computer. When a web server shut down, and the server forgets everything about the user.*/
+//We create a cookie with JS
+document.cookie = "username = John Doe;expires =  Thu, 18 Dec 2018 12:00:00 UTC";
+///Read a Cookie with JS
+var x = document.cookie;
+document.cookie = "username = John Smith; expires = Thu, 18 Dec 2017 12:00:00 UTC;path =/";
+
+
+</script>
+
+</body>
+</html>
