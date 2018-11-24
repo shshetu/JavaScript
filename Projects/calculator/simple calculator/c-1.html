@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MaKing a simple calculator using javascript</title>
+    <script type="text/javascript">
+
+function displaynum(n1){
+  calcform.txt1.value = n1;
+}
+
+
+    </script>
+  </head>
+  <body>
+    <form name="calcform" >
+      <input type="text" style="text-align:right" name="txt1" value=""><br>
+      <input type="button" name="bt9" value="9" onclick="displaynum(bt9.value)">
+      <input type="button" name="bt8" value="8" onclick="displaynum(bt8.value)">
+      <input type="button" name="bt7" value="7" onclick="displaynum(bt7.value)">
+      <input type="button" name="addbt" value="+" onclick="displaynum(addbt.value)"><br>
+      <input type="button" name="bt6" value="6" onclick="displaynum(bt6.value)">
+      <input type="button" name="bt5" value="5" onclick="displaynum(bt5.value)">
+      <input type="button" name="bt4" value="4" onclick="displaynum(bt4.value)">
+      <input type="button" name="subbt" value="-" onclick="displaynum(subbt.value)"><br>
+      <input type="button" name="bt3" value="3" onclick="displaynum(bt3.value)">
+      <input type="button" name="bt2" value="2" onclick="displaynum(bt2.value)">
+      <input type="button" name="bt1" value="1" onclick="displaynum(bt1.value)">
+      <input type="button" name="mulbt" value="*" onclick="displaynum(mulbt.value)"><br>
+      <input type="button" name="bt0" value="0" onclick="displaynum(bt0.value)">
+      <input type="button" name="ptbt" value="." onclick="displaynum(ptbt.value)">
+      <input type="button" name="eqlbt" value="=" onclick="txt1.value=eval(txt1.value)">
+      <input type="button" name="divbt" value="/" onclick="displaynum(divbt.value)"><br>
+    </form>
+  </body>
+</html>

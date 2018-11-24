@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Constructor function</title>
+  </head>
+  <body>
+<h2>Javascript Object Constructors</h2>
+<p id="demo"></p>
+<script type="text/javascript">
+  //Constructor function for Person objects
+  function Person(first,last,age,eye){
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
+
+  //Create a Person object
+  var myFather = new Person("John","Doe",50,"blue");
+
+  //Display age
+  document.getElementById("demo").innerHTML = "My father is "+myFather.age
+  +".";
+</script>
+  </body>
+</html>

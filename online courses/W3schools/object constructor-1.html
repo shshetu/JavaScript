@@ -5,12 +5,20 @@
     <title>Constructor function</title>
   </head>
   <body>
-    <button onclick="setup()"></button>
-    <p id="demo1"></p>
+    <p id="demo"></p>
     <script type="text/javascript">
+function Person(first,last,age,mother,father,blood)
+{
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.mother = mother;
+  this.father = father;
+  this.blood = blood;
+}
+var me = new Person(" Shahariar "," Shetu ",25," Shahinoor "," Belal "," A+ ");
+document.getElementById("demo").innerHTML = me.firstName + me.lastName;
 
-
-      ///Constructor function is reusable
     </script>
   </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>data types</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var data = false;
+      if(data){
+          console.log("Booleans rule ");
+        document.write("Booleans rule ");
+      }
+      else{
+          console.log("Booleans lame ");
+          document.write("Booleans lame ");
+      }
+      var n = null;
+      console.log(n*32);
+      document.write(n*32);
+      ///////////////////////////
+      var num = 3.6;
+      var ber = 6.4;
+      console.log(num+ber);
+      document.write(num+ber);
+      //////////
+      var name = "Beau";
+      console.log("Hi! My name is " + name);
+      document.write(" Hi! My name is " + name);
+      ///////////////////////Symbol
+      var sym1 = Symbol("foo");
+      var sym2 = Symbol("foo");
+      document.write(sym1 ===sym2);
+///////object
+var myCar = new Object();
+myCar.make = "Ford";
+myCar.model = "Mustang";
+document.write(myCar.model);
+    </script>
+  </body>
+</html>

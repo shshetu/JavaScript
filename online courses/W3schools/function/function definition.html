@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Function definition</title>
+  </head>
+  <body>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo3.1"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo5.1"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo7.1"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo9.1"></p>
+
+    <script type="text/javascript">
+        var x = myFunction(4,3); //Function declaration
+      function myFunction(a,b){return a*b;}
+  document.getElementById("demo1").innerHTML = x;
+//////////////////FUnction expression example-2
+var y = function(a,b){return a*b;};//without naming any coverntion is called function expression
+document.getElementById("demo2").innerHTML = y(1,2);
+//it can also be called anonymous FUnction
+
+//Function constructor()-1
+var myFunction1 = new Function("a","b","return a*b");
+document.getElementById("demo3").innerHTML = myFunction1(6,5);
+//FUnction constructor is a very important thing to learn
+//We use new keyword,we declare using "",we invoke using the variable name giving the value inside
+
+
+//Function constructor()-1.1
+var shetu = new Function("a","b","c","return a*b*c");
+document.getElementById("demo3.1").innerHTML = shetu(3,4,2);
+
+//Function consturctor works same as function declaration
+
+//Function hoisting
+myFunc(5);
+function myFunc(y) {return document.getElementById("demo4").innerHTML = y*y;}
+
+////////////Self Invoking function or self invoking anonymous FUnction
+(function(){document.getElementById("demo5").innerHTML = "Hello! I called myself";})();
+//Self invoking function is anonymous type funcion where we have to put two parenthisis within
+//the function and at the end of last parenthisis we have to put another parenthisis to invoke
+
+(function(){document.getElementById("demo5.1").innerHTML = "Hi i am shetu!and a self invoking function!";})();
+//Function can be treated as values
+function myFun1(a,b){return a*b;}
+var z = myFun1(4,3);
+document.getElementById("demo6").innerHTML = z*2;
+
+//Functions are objects
+
+/*The type of operator returns function as function
+but Js functions can best be described as objects. JS
+functions have both properties and methods.*/
+
+function myFun2(a,b){return arguments.length;}
+document.getElementById("demo7").innerHTML = myFun2(4,60,7,6);
+
+//self try
+function myFun21(a,b){return arguments.length;}
+document.getElementById("demo7.1").innerHTML = myFun21(4,7,6);
+
+/////toString()
+function myFun3(a,b){return a*b;}
+var txt =  myFun3.toString();
+document.getElementById("demo8").innerHTML = txt;
+
+///Arrow Functions
+/*Arrow function allows a short string syntax for
+writing function expressions.We don't need the function keyword
+,the return keyword,and the curly brakets.*/
+const a = (x,y)=>x*y;
+document.getElementById("demo9").innerHTML = a(7,6);
+//self practice
+let b =(x,y) => {return (x**2)+y};
+document.getElementById("demo9.1").innerHTML = b(11,11);
+
+//////////////////////////////////////////////////
+    </script>
+  </body>
+</html>
