@@ -6,15 +6,18 @@
 </head>
 
 <body>
-<button onClick="sol1()">solution-1</button>
-<p id="sol1"></p>
+<!-- <button onClick="sol1()">solution-1</button> -->
+<!-- <p id="sol1"></p> -->
 <script>
 
-function sol1(sen){
-	sen = sen.trim();
-	sen = sen.replace(/[^a-zA-Zsd]/,'');
-	
-	}
-sol1("I love Allah");
+document.write(function (sen){
+var arr = sen.match(/[a-z 0-9]+/gi);
+var sorted = arr.sort(function(a,b){
+	return b.length - a.length;
+});
+	return sorted[0];
+}("I love Allah"));
+
+</script>
 </body>
 </html>

@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript Regular expression</title>
+  </head>
+  <body>
+
+<script type="text/javascript">
+  // A regular expression is a sequence of characters that forms
+  //a search pattern. The search pattern can be used for text search
+  //and text replace operations
+
+  //1.Using string search()
+  var str = "visit W3schools!";
+  var n = str.search("W3schools!");
+  //search will always return the index number
+  document.write(n);
+
+//=========================================================
+//Using string seacrch() with a regular expression
+var str1 =  "Visit W3schools!";
+document.write(str.search(/W3schools/gi));
+
+
+
+  //2.Using string replace() ====================
+var rep = str.replace(/W3schools/gi,'Microsoft');
+document.write(rep);
+  //=========================================
+
+  //3.Regular expression modifiers
+
+  //Regular expression patterns:[abc]
+var e1 = "Is this all there is?";
+document.write( e1.match(/[h]/g));
+var e2 = "Can you help me there?";
+document.write( e2.match(/[^h]/g));
+var e3 = "digit are coming: 03434434332?";
+document.write( e3.match(/[0-9]/g));
+var e4 = "digit are coming: 03434434332?";
+document.write( e4.match(/[^0-9]/g));
+var e5 = "green, red, blue, yellow, orange, black";
+document.write(e5.match(/green|blue|yellow/g));
+
+
+  //==================================
+  //Regular expression patterns:[^abc]
+  //Regular expression patterns:[0-9]
+  //Regular expression patterns:[^0-9]
+  //Regular expression patterns:(x|y)
+
+
+//=============Metacharacter==================
+// Metacharacter: .
+var m1 = "That's hot";
+document.write("\t"+m1.match(/h.t/));
+// Metacharacter: \w
+var m2 = "Give 100%";
+document.write(m2.match(/\w/g));
+
+// Metacharacter: \W
+document.write(m2.match(/\W/g));
+
+// Metacharacter: \d
+document.write(m2.match(/\d/g));
+
+// Metacharacter: \D
+document.write(m2.match(/\D/g));
+
+// Metacharacter: \s
+document.write(m2.match(/\s/g));
+
+// Metacharacter: \S
+document.write(m2.match(/\S/g));
+
+// Metacharacter: \b
+document.write(m2.match(/\b100%/gi));
+
+// Metacharacter: \B
+document.write(m2.match(/\Bive/g));
+
+// Metacharacter: \0
+// Metacharacter: \n
+document.write(m2.match(/\n/g)); //If no match found
+//result is null
+
+// Metacharacter: \f
+// Metacharacter: \r
+// Metacharacter: \t
+// Metacharacter: \v
+// Metacharacter: \xxx
+// Metacharacter: \xdd
+// Metacharacter: \uxxxx
+
+  //4.Quantifiers================
+  //Quantifiers: n+
+  var q1 = "Hellooooo World! Hello W3Schools!"
+  document.write(q1.match(/o+/g));
+
+  //Quantifiers: n*
+  document.write(q1.match(/lo*/g));
+
+  //Quantifiers: n?
+  var q2 = "1, 10, 100 or 1000?";
+  document.write(q2.match(/10?/g));
+
+  //Quantifiers: n{X}
+  document.write(" "+q2.match(/\d{4}/g)); //Exactly four digits
+
+  //Quantifiers: n{X,Y}
+  document.write(" "+q2.match(/\d{3,4}/g)); //3 to 4  digits
+
+  //Quantifiers: n{X,}
+  document.write(" "+q2.match(/\d{3,}/g)); //Atleast 3 digits
+
+  //Quantifiers: n$
+  var q3 = "Is\nthis\nhis\n?";
+  document.write(" "+ q3.match(/is$/igm));
+
+  //Quantifiers: ^n
+  document.write(" "+q3.match(/^Is/g));
+
+  //Quantifiers: ?=n
+  document.write(" "+q3.match(/Is(?=all)/));
+
+  //5.Using the RegExp object properties
+  //Property: constructor
+  var c1 = new RegExp("Hello World","g");
+  document.write(c1.constructor);
+
+  //Property: global
+  var c2 = "visit W3schools!";
+  document.write(/W3/ig.global);
+
+  //Property: ignoreCase
+
+  document.write(/W3/ig.ignoreCase);
+
+  //Property: lastIndex
+
+  document.write(/W3/ig.lastIndex);
+
+  //Property: multiline
+
+  document.write(/W3/ig.multiline);
+
+  //Property: source
+
+  document.write(/W3/ig.source);
+
+  //6. RegExp Object Methods
+  //Method: exec()
+  var e1 = "The best things in life are free!";
+  document.write(new RegExp("e").exec(e1));
+
+  //Method: test()
+  document.write(new RegExp("e").test(e1));
+  //Method: toString()
+document.write(new RegExp("e").toString());
+
+</script>
+  </body>
+</html>
