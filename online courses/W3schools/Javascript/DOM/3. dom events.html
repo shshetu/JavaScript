@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>html dom events</title>
+  </head>
+  <body>
+<h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
+
+
+Enter your name: <input type="text" id="fname" onchange="myFunction()">
+When you leave the input field, a function is triggered which transforms
+the input text to upper case.
+<hr>
+<!-- onmouseover event -->
+<h1>on mouse over event</h1>
+
+
+<script type="text/javascript">
+  function myFunction(){
+    var x = document.getElementById("fname");
+x.value = x.value.toUpperCase();
+  }
+</script>
+
+
+  </body>
+</html>
