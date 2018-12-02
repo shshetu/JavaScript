@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+	var msg = "";
+    var email = document.forms["myForm"]["email"].value;	
+	var info = document.getElementById('ph').value;	
+	msg+=checkEmail(email);
+	msg+=checkLength(info);    
+	if(msg=="") msg="All OK";
+	document.getElementById('error').innerHTML = msg;
+}
+
+function checkEmail (strng) {
+var error="";
+var atpos = strng.indexOf("@");
+var dotpos = strng.lastIndexOf(".");
+	if (atpos<1 || dotpos<=atpos+2 || dotpos+2>=strng.length) {
+        error = atpos+ " "+ dotpos+" "+ strng.length+" Please enter a valid email address.<br>";
+    }
+return error;    
+}
+function checkLength (strng) {
+var error="";
+if (strng.length<7) { 
+		error="Password must contain 7 characters<br>";
+	}
+return error;
+}
+</script>
+</head>
+
+<body>
+<form name="myForm">
+Email: <input type="text" name="email"><br>
+Password: <input type="text" id="ph" value=""><br>
+<div id="error"></div>
+<input type=button value=Validate onClick="validateForm()"/>
+</form>
+</body>
+
+</html>

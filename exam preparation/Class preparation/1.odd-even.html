@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+
+function oddEvenCheck(num){
+	if(num%2==0){
+return document.write ("Even" + "<br>");
+		}
+		else{
+return document.write("Odd" + "<br>");
+			}
+	}
+oddEvenCheck(-2);
+
+function oddEvenPrint(sn,en){
+for(var i=sn;i<=en;i++){
+	document.write(i+" ");
+	oddEvenCheck(i);
+	}
+	}
+oddEvenPrint(1,10);
+</script>
+</head>
+
+<body>
+<h1>Program to find out even and odd number</h1>
+
+
+</body>
+</html>

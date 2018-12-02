@@ -1,0 +1,31 @@
+<html>
+<head>
+<script>
+function openWin()
+  {
+  //a=open("","","");
+  
+   a=open("","hello","width=600,height=500, resizable=no");
+   //a=open("Clock.html","","width=400,height=200,toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,scrollbars=yes,copyhistory=yes,resizable=no");
+   a.moveTo(screen.width/2-300,screen.height/2-250)
+  a.document.write(a.name);
+  //alert(a.name);
+  }
+//http://www.javascriptkit.com/javatutors/advwin2.shtml
+function closeWin()
+  {
+   if(a.closed)
+     {
+       alert("window already closed!");
+     }
+   else 
+     {
+       a.close();
+     }
+   }
+</script>
+</head>
+<body>
+<input type="button" value="Open" onClick="openWin()">
+<input type="button" value="Close" onClick="closeWin()">
+<html>

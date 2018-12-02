@@ -1,0 +1,18 @@
+<html>
+<script>
+var a=parseInt(prompt("Enter Length",""));
+var pn= new Array();  
+    for(var x=1;x<=a;x++){
+        var ctr=0;
+        for(var y=1;y<=x;y++){
+            if(x%y==0){
+                ctr+=1;
+            }
+        }
+        if(ctr==2){
+			pn.push(x);
+        }
+    }     
+ document.write("The Prime Numbers from 1-"+a+" are : "+pn); 
+</script>
+<html>

@@ -1,0 +1,25 @@
+<html>
+<script>
+var len=parseInt(prompt("Enter Length",""));
+var a=new Array(len);
+var max,min;
+for(var i=0;i<a.length;i++){
+   a[i]=parseInt(prompt("Enter element no. "+(i+1),""));   
+   if(i==0){
+     max=a[i];
+     min=a[i];
+    }
+   else if(a[i]>max){
+     max=a[i];
+    }
+   else if(a[i]<min){
+     min=a[i];
+    }
+   else{
+     continue;}
+  }
+document.write("Numbers are: "+a+"<br>");
+document.write("Maximum number is: "+max+"<br>");
+document.write("Minimum number is: "+min);
+</script>
+<html>

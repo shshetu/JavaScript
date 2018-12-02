@@ -1,0 +1,26 @@
+<script>
+function factorial(n)
+{
+// If the number is not an integer, round it down. 
+    n = Math.floor(n);
+
+// The number must be equal to or bigger than zero 
+    if (n < 0)
+    {
+        return "undefined";
+    }
+
+    if (n == 0)
+    { // If the number is 0, its factorial is 1.
+        return 1;
+    }
+    else 
+    { // Make a recursive call 
+        return (n * factorial(n - 1)); 
+    } 
+}
+
+number = prompt("Enter a number:", "5")
+document.write(factorial(number));
+
+</script>

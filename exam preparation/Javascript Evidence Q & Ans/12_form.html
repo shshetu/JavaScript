@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html><head>
+<title>JavaScript - Example form</title>
+<script type="text/javascript">
+function checkEmail (strng) {
+var error="";
+var atpos = strng.indexOf("@");
+var dotpos = strng.lastIndexOf(".");
+// atpos<1 checks at least one character before @
+// dotpos<=atpos+2 checks at least two characters after @
+// dotpos+2>=strng.length checks at least two characters after .
+	if (atpos<1 || dotpos<=atpos+2 || dotpos+2>=strng.length) {
+        error = "Please enter a valid email address.";
+		alert(error);
+		return false;
+    }
+return true;    
+}
+
+function checkForm(){
+var allthings=""; //variable to store all data
+//for text field and text area
+for (i=0;i<3;i++) {
+		var box = document.forms['example'].elements[i];
+		if (!box.value) {
+			alert('You haven\'t filled in ' + box.name + '!');
+			box.focus()
+			return false;
+		}
+		allthings += box.name + ': ' + box.value + '<br>';
+	}
+	//checking valid email
+	if(!checkEmail(document.forms['example'].elements[2].value)){
+		document.forms['example'].elements[2].focus();
+		return false;
+	}
+	//for radio
+	user_input = document.forms['example'].subject.value;
+	allthings += "Subject : " + user_input + '<br>';
+	//for select
+	user_select = document.forms['example'].area.value;
+	allthings += "Area : " + user_select + '<br>';
+	// for checkbox
+	var courseLeng = document.forms[0].course.length;
+	var courseResult="";
+	for(var i=0; i<courseLeng; i++){
+	courseValue = document.forms['example'].course[i].checked;
+		if(courseValue){
+		courseResult += document.forms['example'].course[i].value+" ";
+		}
+	}
+	allthings += "Course : " + courseResult + '<br>';
+	//open window
+	a=open("","","");	
+	a.document.write("<div id='output'></div>");
+	//display in new window
+	//a.document.getElementById('output').innerHTML=allthings
+	//display in current window
+	document.forms['example'].output.value=allthings;
+}
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<form name="example" action="#" onsubmit="checkForm(); return false">
+<table class="form">
+<tbody>
+	<tr>
+		<td>Name</td>
+		<td><input name="name" id="name" ></td>
+	</tr>
+	<tr>
+		<td>Address</td>
+		<td><textarea name="address" ></textarea></td>
+	</tr>
+	<tr>
+		<td>E-mail</td>
+		<td><input name="email"></td>
+	</tr>
+	<tr>
+		<td>Corse</td>
+		<td><input name="subject" id="subject" value="Oracle" type="radio">Oracle<br>
+		<input name="subject" id="subject"  value="J2EE" type="radio">J2EE<br>
+		<input name="subject" id="subject" value="NT" type="radio">NT
+		</td>
+	</tr>
+	<tr>
+		<td>Select Area</td>
+		<td><select name="area">
+			<option value="" selected="selected">--- Select ---</option>
+			<option value="Kakrile">Kakrile</option>
+			<option value="Motijheel">Motijheel</option>
+			<option value="Banani">Banani</option>
+			<option value="Panthapath">Panthapath</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Education</td>
+		<td><input name="course" value="SSC" type="checkbox">SSC<br>
+		<input name="course" value="HSC" type="checkbox">HSC<br>
+		<input name="course" value="BSC" type="checkbox">BSC<br>
+		<input name="course" value="MSC" type="checkbox">MSC</td>
+	</tr>
+	<tr><td colspan="2"><input value="Submit form" type="submit"><br>
+	<input type="reset"></td>
+	</tr>
+	<!-- <tr><td colspan="2"><textarea cols="30" rows="7" name="output" placeholder="When you hit 'Submit' the user input will be written to this textarea"></textarea></td>
+	</tr> -->
+</tbody>
+</table>
+</form>
+</body></html>

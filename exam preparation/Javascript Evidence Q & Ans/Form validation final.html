@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<head>
+<script>
+function checkEmail (strng) {
+var error="";
+var atpos = strng.indexOf("@");
+var dotpos = strng.lastIndexOf(".");
+
+	if (atpos<1 || dotpos<=atpos+2 || dotpos+2>=strng.length) {
+        error = "Please enter a valid email address.";
+		alert(error);
+		return false;
+    }
+return true;    
+}
+
+function checkForm (){
+var totalvalue="";
+for (i=0;i<2;i++) {
+		var box = document.forms['example'].elements[i];
+		if (!box.value) {
+			alert('You haven\'t filled in ' + box.name + '!');
+			box.focus()
+			return false;
+		}
+		totalvalue+= box.name + ': ' + box.value + '<br>';
+	}
+
+
+
+var area=document.example.area.value;
+totalvalue+=area+"<br>";
+
+var course=document.example.course.value;
+totalvalue+=course+"<br>";
+
+var email=document.example.email.value;
+if(!checkEmail(email)){
+		document.form.elements[2].focus();
+		return false;
+	}
+totalvalue+=email+"<br>";
+
+var selected="";
+for(i=0; i<document.example.edu.length; i++){
+if(document.example.edu[i].checked){
+selected+=document.example.edu[i].value+" ";
+}
+}
+totalvalue+=selected+"<br>";
+
+a=open();
+a.document.write(totalvalue);
+}
+</script>
+</head>
+
+<body>
+<form id="form" name="example" method="post" action="" onSubmit="checkForm()">
+  <table width="508" border="0">
+    <tr>
+      <td width="210"> Name </td>
+      <td width="12">&nbsp;</td>
+      <td width="264"><label>
+        <input name="name" type="text" id="name" />
+      </label></td>
+    </tr>
+   
+    <tr>
+      <td>Address</td>
+      <td>&nbsp;</td>
+      <td><label>
+        <textarea name="address"></textarea>
+      </label></td>
+    </tr>
+    <tr>
+	 <tr>
+      <td>Email</td>
+      <td>&nbsp;</td>
+      <td><label>
+        <input type="text" name="email" />
+      </label></td>
+    </tr>
+	
+      <td>Course</td>
+      <td>&nbsp;</td>
+      <td><label>
+        <input name="course" type="radio" value="oracle" />
+      Oracle<br />
+      <input name="course" type="radio" value="Java" />
+      Java<br />
+      <input name="course" type="radio" value="Wpsi" />
+      Wpsi<br />
+      </label></td>
+    </tr>
+    <tr>
+      <td>Education</td>
+      <td>&nbsp;</td>
+      <td><label>
+        <input name="edu" type="checkbox" id="edu" value="SSC" />
+      SSC<br />
+      <input name="edu" type="checkbox" id="edu" value="HSC" />
+      HSC<br />
+      <input name="edu" type="checkbox" id="edu" value="BBA" />
+      BBA<br />
+      <input name="edu" type="checkbox" id="edu" value="MBA" />
+      MBA</label></td>
+    </tr>
+    <tr>
+      <td>Area</td>
+      <td>&nbsp;</td>
+      <td><label>select
+          <select name="area" id="area">
+            <option>Dhaka</option>
+            <option>Chittagong</option>
+            <option>Commilla</option>
+          </select>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="3"><label>
+        <input type="submit" name="Submit" value="Submit" />
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="3"><label>
+        <input name="reset" type="reset" id="reset" value="Reset" />
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
