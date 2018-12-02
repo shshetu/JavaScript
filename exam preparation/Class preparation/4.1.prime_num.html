@@ -2,9 +2,22 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>priniting non prime numbers with divisors</title>
+<script>
+function primePrint(sn,en){
+	for(var i=sn;i<=en;i++){
+		for(var j=2;j<i;j++){
+			if(i==0||i==1){return document.write(j+"Not Prime! ")}
+			else if(i%j!=0){return document.write(j+"Prime! ")}
+			}
+		}
+		return document.write(j+"Not Prime ");
+	}
+primePrint(1,10);
+</script>
 </head>
 
 <body>
+
 </body>
 </html>

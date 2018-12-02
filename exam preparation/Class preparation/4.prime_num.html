@@ -4,33 +4,39 @@
 <meta charset="utf-8">
 <title>Prime numbers</title>
 <script>
+var sn,en;
+//num = parseInt(prompt("Enter the number",""));
+sn = parseInt(prompt("Enter your first num",""));
+en = parseInt(prompt("Enter your second num",""));
 function primeCheck(num){
-	if(num==0||num==1){return document.write(num +" Not prime!"+"<br>");}
-		else if(num==2){return document.write(num+" Prime!"+"<br>");}
+	
+	if(num==0||num==1){return document.write(num +"  Not prime!"+"<br>");}
+		else if(num==2){return document.write(num+"  Prime!"+"<br>");}
 	///////////////////////////////////////////
 	for(var i=2;i<num;i++){	
-	if(num%i!==0){
-			return document.write(num+"Prime!"+"<br>");
-			
+	if(num%i==0){
+			return document.write(num+"   Not Prime!"+"<br>");
 			}
-			else{return document.write(num+" Not Prime!"+"<br>");}
-		}
+		}return document.write(num+"  Prime!"+"<br>");
+		
 	}
-primeCheck(99);
 
-var sn = parseInt(prompt("Enter your first num",""));
-var en = parseInt(prompt("Enter your second num",""));
+
+
 function primePrint(sn,en){
+
 	for(var j=sn;j<=en;j++){
 		primeCheck(j);
 		}
 	}
-primePrint(sn,en)
+
 
 </script>
 </head>
 
 <body>
 <h1>Program to check prime</h1>
+<button onClick="primeCheck(9)">click to check</button>
+<button onClick="primePrint(sn,en)">click to Print</button>
 </body>
 </html>
