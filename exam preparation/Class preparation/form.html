@@ -3,13 +3,179 @@
 <head>
 <meta charset="utf-8">
 <title>Form validation</title>
+<style media="screen">
+  label{
+    color:red;
+    padding: 5px; 10px;
+  }
+  .mainDiv{
+    margin-left: 100px;
+    margin-top: 50px;
+  }
+</style>
+<script type="text/javascript">
+  var win;
+  function closeWindow(){
+    win.close();
+  }
+  function validateForm(){
+    /////For variable name
+    var fname = document.myForm.fname.value;
+    var lname = document.myForm.lname.value;
+    var email = document.myForm.email.value;
+    var gender = document.myForm.gender.value;
+    var education = "";
+    if(document.myForm.SSC.checked){
+      education += document.myForm.SSC.value;
+    }
+    if(document.myForm.HSC.checked){
+      education += document.myForm.HSC.value;
+    }
+    if(document.myForm.BSC.checked){
+      education+= document.myForm.BSC.value;
+    }
+    if(document.myForm.MSC.checked){
+      education+= document.myForm.MSC.value;
+    }
+    var round = document.myForm.round.value;
+    var pass1 = document.myForm.pass1.value;
+    var pass2 = document.myForm.pass2.value;
+    var comment = document.myForm.comment.value;
+    /////For validation
+    if(fname.length<3){
+      document.getElementById("fname").innerHTML = "First Name should be atleast 3 characters";
+      return false;
+    }else{
+      document.getElementById("fname").innerHTML ="";
+    }
+  if(lname.length<3){
+    document.getElementById("lname").innerHTML = "Last Name should be at least 3 characters";
+return false;
+}else{
+  document.getElementById("lname").innerHTML = "";
+}
+/////////emailval
+if(email ===""){
+  document.getElementById("email").innerHTML ="Please Enter your Email";
+return false;
+}else{
+  var emailVal = /[A-z0-9_.]*[@][bing-gmail-yahoo-one]+([.][com])+/;
+  if(!emailVal.test(email)){
+    document.getElementById("email").innerHTML = "Please Enter a valid email";
+    return false;
+  }else{
+document.getElementById("email").innerHTML ="";
+  }
+}
+///Gender val
+if(gender == ""){
+  document.getElementById("gender").innerHTML = "Please Enter your gender";
+return false;
+}else{
+  document.getElementById("gender").innerHTML ="";
+}
+//education valid
+if(education ==""){
+  document.getElementById("education").innerHTML ="Please Enter your Education";
+  return false;
+}else{
+  document.getElementById("education").innerHTML="";
+}
+//round validation
+if(round == "Select A Round"){
+  document.getElementById("round").innerHTML = "Round must be selected";
+  return false;
+}else{
+  document.getElementById("round").innerHTML ="";
+}
+//Password validation
+if(pass1.length<6){
+  document.getElementById("pass1").innerHTML ="Password must be 6 characters.";
+  return false;
+}else{
+  document.getElementById("pass1").innerHTML ="";
+}
+if(pass2.length<6){
+  document.getElementById("pass2").innerHTML ="Password must be 6 characters.";
+  return false;
+}else{
+  document.getElementById("pass2").innerHTML ="";
+}
+///match password
+if(pass1!=pass2){
+  document.getElementById("matches").innerHTML = "Password does not match";
+return false;
+}else{
+  document.getElementById("matches").innnerHTML ="";
+}
+///Comments
+if(comment.length<10){
+  document.getElementById("comment").innerHTML="Comments should be atleast 10 character";
+  return false;
+}else{
+  document.getElementById("comment").innerHTML="";
+}
+////Open Window
+win = window.open("","","width=400");
+win.document.write("Information"+"<br>");
+win.document.write(fname+lname+"<br>");
+win.document.write(email+"<br>");
+win.document.write(gender+"<br>");
+win.document.write(education+"<br>");
+win.document.write(round+"<br>");
+win.document.write(comment+"<br>");
+  }
+</script>
 </head>
 
 <body>
-<form>
-Name: <input type="text"> 
-Email: <input type="email">
+<div class="mainDiv">
+  <form name="myForm">
+First Name:<br>
+<input type="text" name="fname">
+<label id="fname"></label><br>
+Last Name:<br>
+<input type="text" name="lname">
+<label id="lname"></label><br>
+E-Mail:<br>
+<input type="text" name="email">
+<label id="email"></label><br>
+Gender:<br>
+<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">FeMale
+<label id="gender"></label><br>
+Education:<br>
+<input type="checkbox" name="SSC" value="SSC ">SSC
+<input type="checkbox" name="HSC" value="HSC ">HSC
+<input type="checkbox" name="BSC" value="BSC ">BSC
+<input type="checkbox" name="MSC" value="MSC ">MSC
+<label id="education"></label><br>
+Round:<br>
+<select name="round">
+<option>Select A Round</option>
+<option>Round 37</option>
+<option>Round 38</option>
+<option>Round 39</option>
+<option>Round 40</option>
+</select>
+<label id="round"></label><br>
+Password:<br>
+<input type="password" name="pass1">
+<label id="pass1"></label><br>
+Confirm Password:<br>
+<input type="password" name="pass2">
+<label id="pass2"></label><br>
+<label id="matches"></label><br>
+Comment:<br>
+<textarea name="comment" rows="8" cols="80"></textarea>
+<label id="comment"></label><br>
+<button type="reset">Reset</button>
 
-</form>
+  </form>
+  <button onclick="validateForm()">Submit</button>
+  <button onclick="closeWindow()">Close Window</button>
+
+</div>
+
 </body>
 </html>
