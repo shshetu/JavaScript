@@ -53,19 +53,79 @@ if(email==""){
   document.getElementById("email").innerHTML = "Enter your email!";
   return false;
 }else{
-  var emailVal = /[A-z0-8.-_]*[@][gamil-yahoo]+([.][com])+/;
-  if(!emailVal.test(email)){
+	var emailVal = /[A-z0-9._-]*[@][gmail]+([.][com])+/;
+ // var emailVal = /[A-z0-9.-_]*[@][gamil-yahoo]+([.][com])+/;
+  /*if(!emailVal.test(email)){
     document.getElementById("email").innerHTML = "Email field"
-  }
+  }*/
+if(!emailVal.test(email)){
+	document.getElementById("email").innerHTML = "Email field is not valid!";
+	return false;
+	}else{
+		document.getElementById("email").innerHTML ="";
+		}
 }
+
 //gender validate
+if(gender == ""){
+	document.getElementById("gender").innerHTML = "Enter your gender";
+	return false;
+	}else{
+document.getElementById("gender").innerHTML = "";		
+		}
 //education validate
+if(education ==""){
+	document.getElementById("education").innerHTML = "Please Enter your education";
+	return false;
+	}else{
+document.getElementById("education").innerHTML ="";		
+		}
 //round validate
+if(round==""){
+document.getElementById("round").innerHTML = "Please enter your round";	
+return false;
+	}else{
+document.getElementById("round").innerHTML = "";			
+		}
 //pass1 validate
+if(pass1.length<4){
+document.getElementById("pass1").innerHTML = "Password must be atleast 4 characters!";	
+return false;	
+	}else{
+document.getElementById("pass1").innerHTML = "";		
+		
+		}
 //pass2 validate
+if(pass2.length<4){
+document.getElementById("pass2").innerHTML = "Password must be atleast 4 characters!";
+return false;		
+	}else{
+document.getElementById("pass2").innerHTML = "";		
+		
+		}
+
 //match validate
+if(pass1 != pass2){
+document.getElementById("match").innerHTML = "Password does not match!";
+return false;	
+	}else{
+	document.getElementById("match").innerHTML = "";	
+	}
 //comment validate
-  ///Display in window
+if(comment.length<10){
+document.getElementById("comment").innerHTML = "Comments must be atleast 10 character";
+return false;	
+	}else{
+	document.getElementById("comment").innerHTML = "";	
+	}
+		///Display in window
+	win = window.open("","","width=400");
+  win.document.write(fname+lname);
+  win.document.write(gender);
+    win.document.write(education);
+	win.document.write(round);
+	win.document.write(comment);
+
 }
 </script>
   </head>

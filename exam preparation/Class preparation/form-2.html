@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form with validation</title>
+<style>
+label{
+	color:red;
+	padding: 5px;10px;	
+	}
+.mainDiv{
+	margin-left:100px;
+	margin-top:50px;
+	}
+
+</style>
+<script>
+var win;
+function closeWindow(){
+win.close()	
+	}
+	function validateForm(){
+////decalre variable name
+var fname = document.myForm.fname.value;
+var email = document.myForm.email.value;
+var pass1 = document.myForm.pass1.value;
+var pass2 = document.myForm.pass2.value;
+
+///validate form
+if(fname.length<3){
+document.getElementById("fname").innerHTML = "Input atleast 3 character";	return false;
+	}else{
+document.getElementById("fname").innerHTML = "";
+		}
+if(email==""){
+document.getElementById("email").innerHTML = "Enter Email";	return false;
+	
+	}else{
+var emailVal = /[A-z0-9.-_]*[@][yahoo|gmail|bing]+([.][com])+/;	
+if(!emailVal.test(email)){
+document.getElementById("email").innerHTML = "Invalid Email!";	return false;
+	
+	}else{
+document.getElementById("email").innerHTML = "";
+		}
+//Pass validation
+if(pass1.length<4){
+	document.getElementById("pass1").innerHTML = "Password length should be atleast 4 character";	return false;
+
+	}else{
+			document.getElementById("pass1").innerHTML ="";
+
+		}
+	if(pass2.length<4){
+	document.getElementById("pass2").innerHTML = "Password length should be atleast 4 character";	return false;
+
+	}else{
+			document.getElementById("pass2").innerHTML ="";
+
+		}
+if(pass1!=pass2){
+document.getElementById("matchPass").innerHTML ="Password does not match!";return false;
+	
+	}else{
+	document.getElementById("matchPass").innerHTML ="";	
+		}		
+	}
+	win = window.open("","","width=400");
+	win.document.write(fname+"<hr>"+email);
+	}
+						
+////Display Output
+
+
+	
+</script>
+</head>
+
+<body>
+<div class="mainDiv">
+<form name="myForm">
+Name:<input type="text" name="fname"><label id="fname"></label><br>
+email:<input type="text" name="email"><label id="email"></label><br>
+password:<input type="password" name="pass1"><label id="pass1"></label><br>
+confirm password:<input type="password" name="pass2"><label id="pass2"></label><br>
+<label id="matchPass"></label>
+<input type="reset" value="Reset">
+</form>
+<button onClick="validateForm()">Submit</button>
+<button onClick="closeWindow()">Close window</button>
+</div>
+
+</body>
+</html>
