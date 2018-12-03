@@ -2,21 +2,22 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>factorial</title>
+<title>Factorial</title>
 <script>
-var x;
+var fac=1;
 function factorial(num){
-if(num == 0||num == 1){return 1;}
-else{
-return num*factorial(num-1);		
-		}
-document.write(x);		
+for(var i= num;i>=1;i--)
+{
+	fac*=i;
+	}
+document.write(fac);		
 	}
 factorial(4);
 </script>
 </head>
 
 <body>
+
 
 </body>
 </html>

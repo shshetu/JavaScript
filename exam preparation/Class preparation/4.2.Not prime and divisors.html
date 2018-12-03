@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>printing not prime divisors</title>
+<script>
+function checkPrime(num){
+	if(num==0&&num==1){return document.write = "Not Prime!";
+	}
+	else if(num==2){
+	return document.write =  "Prime!";	
+		}else{
+	for(var i=2;i<num;i++){
+if(num%i!=0){
+return document.write = "Prime!";	
+	
+	}	// return document.getElementById("demo1").innerHTML = "Not Prime!";		
+		}	
+		
+			}
+	}
+	checkPrime(2);
+</script>
+</head>
+
+<body>
+
+<button onClick="checkPrime()">Click to check</button>
+<p id="demo1"></p>
+
+</body>
+</html>

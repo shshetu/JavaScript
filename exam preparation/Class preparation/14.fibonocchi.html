@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Program to calculate fibonocchi numbers</title>
+<script>
+
+
+function fib(num){
+if(num<=1) return 1;	
+return fib(num-1)+fib(num-2);
+}
+</script>
+
+
+</head>
+
+<body>
+<button onClick="fib(4)">fib print</button>
+<p id="demo"></p>
+</body>
+</html>

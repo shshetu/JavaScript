@@ -28,7 +28,7 @@ var pass2 = document.myForm.pass2.value;
 
 ///validate form
 if(fname.length<3){
-document.getElementById("fname").innerHTML = "Input atleast 3 character";	return false;
+document.getElementById("fname").innerHTML = "<font>Input atleast 3 character</fo";	return false;
 	}else{
 document.getElementById("fname").innerHTML = "";
 		}
@@ -36,7 +36,7 @@ if(email==""){
 document.getElementById("email").innerHTML = "Enter Email";	return false;
 	
 	}else{
-var emailVal = /[A-z0-9.-_]*[@][yahoo|gmail|bing]+([.][com])+/;	
+var emailVal = /[A-z0-9.-_]*[@][yahoo|gmail|bing]+([.][bd])+/;	
 if(!emailVal.test(email)){
 document.getElementById("email").innerHTML = "Invalid Email!";	return false;
 	
