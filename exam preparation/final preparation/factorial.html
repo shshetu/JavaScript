@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+        //prompt user to enter a number to calculate the factorial
+        function factorial(n) {
+    if (n === 0) {
+      return 1;
+    }
+
+    return n * factorial(n - 1);  //Here's the recursion
+  }
+
+
+  var n=prompt("Enter the value:");  // Enter any value
+
+  alert(factorial(n));
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

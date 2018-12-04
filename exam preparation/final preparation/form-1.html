@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Creating form</title>
+    <script type="text/javascript">
+var win;
+function closeWindow(){
+  win.close();
+}
+function validateForm(){
+///var Name
+var fname = document.myForm.fname.value;
+var lname = document.myForm.lname.value;
+var email = document.myForm.email.value;
+var gender = document.myForm.gender.value;
+var education = "";
+if(document.myForm.ssc.checked){education+= document.myForm.ssc.value;}
+if(document.myForm.hsc.checked){education+= document.myForm.hsc.value;}
+if(document.myForm.bsc.checked){education+= document.myForm.bsc.value;}
+if(document.myForm.msc.checked){education+= document.myForm.msc.value;}
+var round = document.myForm.round.value;
+var pass1 = document.myForm.pass1.value;
+var pass2 = document.myForm.pass2.value;
+var comment = document.myForm.comment.value;
+
+///validate form
+if(fname.length<3){document.getElementById("fname").innerHTML = "Name should be atleast 4 characters!";return false; }
+else{document.getElementById("fname").innerHTML = "";}
+if(lname.length<3){document.getElementById("lname").innerHTML = "Name should be atleast 4 characters!";return false; }
+else{document.getElementById("lname").innerHTML = "";}
+if(email == ""){document.getElementById("email").innerHTML = "Please Enter your email!";return false; }
+else{
+  var emailVal= /[A-z0-9.-_]*[@][gmail]+([.][com])+/;
+  if(!emailVal.test(email)){document.getElementById("email").innerHTML = "Invalid Email";return false;}
+  else{document.getElementById("email").innerHTML = "";}
+}
+if(gender ==""){document.getElementById("gender").innerHTML = "Enter your gender!";return false;}
+else{document.getElementById("gender").innerHTML="";}
+if(round =="Select A Round"){document.getElementById("round").innerHTML = "Enter your round!";return false;}
+else{document.getElementById("round").innerHTML="";}
+if(pass1.length<6){document.getElementById("pass1").innerHTML = "Password should be atleast 6 characters!";return false;}
+else{document.getElementById("pass1").innerHTML="";}
+if(pass2.length<6){document.getElementById("pass2").innerHTML = "Password should be atleast 6 characters!";return false;}
+else{document.getElementById("pass2").innerHTML="";}
+if(pass1!=pass2){document.getElementById("match").innerHTML = "Password does not match!";return false;}
+else{document.getElementById("match").innerHTML="";}
+if(comment.length<10){document.getElementById("comment").innerHTML = "Comment should be atleast 10 characters!";return false;}
+else{document.getElementById("comment").innerHTML="";}
+
+///display result
+win = window.open("","","width=400");
+win.document.write("<center><b>Informations</b></center>"+"<br>"+fname+"<br>"+lname+"<br>"+email+"<br>"+education+"<br>"+round+"<br>"+comment);
+}
+    </script>
+  </head>
+  <body>
+<div class="mainDiv">
+<form name="myForm">
+First Name:<input type="text" name="fname"><label id="fname"></label><br>
+Last Name:<input type="text" name="lname"><label id="lname"></label><br>
+Email:<input type="text" name="email"><label id="email"></label><br>
+Gender:<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">Female <label id="gender"></label><br>
+Education:<input type="checkbox" name="ssc" value="SSC ">SSC
+<input type="checkbox" name="hsc" value="HSC ">HSC
+<input type="checkbox" name="bsc" value="BSC ">BSC
+<input type="checkbox" name="msc" value="MSC ">MSC
+<label id="education"></label><br>
+Round:<select name="round">
+<option>Select A Round</option>
+<option>Round 37</option>
+<option>Round 38</option>
+<option>Round 39</option>
+<option>Round 40</option>
+</select><label id="round"></label><br>
+Password:<input type="password" name="pass1"><label id="pass1"></label><br>
+Confirm Password:<input type="password" name="pass2"><label id="pass2"></label>
+<label id="match"></label><br>
+Comment:<textarea name="comment" rows="8" cols="80"></textarea><label id="comment"></label><br>
+<input type="reset" value="Reset">
+</form>
+<button onclick="validateForm()">Submit</button>
+<button onclick="closeWindow()">Close Window</button>
+
+</div>
+  </body>
+</html>

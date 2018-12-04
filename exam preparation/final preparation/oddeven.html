@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script type="text/javascript">
+  var oddEven=(num)=> {
+    var num= parseInt(prompt("Enter number to check",""));
+    if(num%2==0){return innerHTML="Even"}
+else{return innerHTML="Odd"}
+};
+var sn,en;
+var oddEvenPrint =(sn,en)=>{
+
+  sn = prompt("Enter the starting number","");
+   en = prompt("Enter the ending number","");
+for(var i = sn;i<=en;i++){
+  if(sn%2==0){document.write (sn +" Even")}
+  else{document.write(sn +" Odd")}
+}
+
+}
+</script>
+  </head>
+  <body>
+<button onclick="alert(oddEven())">odd Even check</button>
+<button onclick="oddEvenPrint(sn,en)">odd Even check</button>
+  </body>
+</html>

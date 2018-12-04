@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    var sn,en;
+  function primeCheck(num){
+for(var i=2;i<num;i++){
+  if(num%2 == 0){return document.write("Not Prime");}
+return document.write(" Prime!");
+}
+
+function primePrint(sn,en){
+   sn = prompt("sn","");
+  en = prompt("en","");
+for(var j=sn;j<=en;j++){primeCheck(j)}
+
+}
+}
+    </script>
+  </head>
+  <body>
+<button onclick="alert(primeCheck(5))">click to check prime</button>
+<button onclick="primePrint(1,10)">click to print prime</button>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic form</title>
+    <script type="text/javascript">
+      function cngBgColor(){
+        var col = document.myForm.color.value;
+        if(col=="blue"){document.body.style.backgroundColor=col;}
+        else if(col=="green"){
+          document.body.style.backgroundColor = col;
+        }else if(col =="yellow"){
+          document.body.style.backgroundColor = col;
+        }
+      }
+      function validateForm(){
+        var fname = document.myForm.fname.value;
+        if(fname.length>=3){
+          document.getElementById("erfname").innerHTML = fname + " OK!";
+          if(fname=="green"){
+          document.getElementById("erfname").style.color = "green";
+}else if(fname=="blue"){document.getElementById("erfname").style.color = "blue";}
+else if(fname=="yellow"){document.getElementById("erfname").style.color = "yellow";}
+        }else if(fname.length<=3){document.getElementById("erfname").innerHTML ="";}
+      }
+    </script>
+  </head>
+  <body>
+<div class="">
+  <form name="myForm" action="index.html" method="post">
+<input type="radio" name="color" value="blue" onclick="cngBgColor()">Blue <br>
+<input type="radio" name="color" value="green" onclick="cngBgColor()">Green <br>
+<input type="radio" name="color" value="yellow" onclick="cngBgColor()">Yellow <br>
+<input type="text" name="fname" oninput="validateForm()"><br><label id="erfname"></label>
+
+  </form>
+</div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script type="text/javascript">
+  var sum=0;
+  var x =[];
+var num = parseInt(prompt("How many numbers to calculate?",""));
+  for(var i=0;i<num;i++){x[i]=parseInt(prompt("Enter values",""));
+sum+=x[i];
+}
+  var y = x.sort(function(a,b){return b-a});
+var max = y[0];
+var min = y[(y.length-1)];
+var avg = sum/num;
+  document.write(y+" "+min+" "+max+" "+sum+" "+avg);
+</script>
+  </head>
+  <body>
+
+  </body>
+</html>
